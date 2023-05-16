@@ -8,7 +8,7 @@ export default function BuyerList() {
         fetch("http://localhost:8080/buyer")
         .then((response) => response.json())
         .then((data) => setBuyers(data))
-    }, [buyers])
+    }, [])
 
     return (
 
