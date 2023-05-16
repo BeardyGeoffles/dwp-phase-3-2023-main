@@ -76,9 +76,18 @@ export default function PropertyForm(){
             <input type="number" required value={bathroom} name="bathroom" id="bathroom" 
             onChange={(e)=> setBathroom(parseInt(e.target.value))}/>   <br></br>
 
-            <label htmlFor="garden">Garden:</label>
+            {/* <label htmlFor="garden">Garden:</label>
             <input type="checkbox" required value={garden} name="garden" id="garden" 
-            onChange={(e)=> setGarden(e.target.checked ? 1 : 0)}/><br></br>
+            onChange={(e)=> setGarden(e.target.checked ? 1 : 0)}/><br></br> */}
+
+            <label htmlFor="garden">Garden:</label>
+            <select name="garden" id="garden" required value={garden}
+            onChange={(e) => setGarden(e.target.value)}>
+                <option value="FRONT">Front</option>
+                <option value="BACK">Back</option>
+                <option value="BOTH">Both</option>
+                <option value="NONE">None</option>
+            </select><br></br>
 
             <label htmlFor="sellerId">Seller Id: </label>
             <input type="number" required value={sellerId} name="sellerId" id="sellerId" 
