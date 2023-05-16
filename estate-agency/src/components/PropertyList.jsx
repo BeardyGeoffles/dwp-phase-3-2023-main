@@ -5,7 +5,7 @@ export default function PropertyList() {
     const [properties, setProperties] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:8000/property")
+        fetch("http://localhost:8080/property")
         .then((response) => response.json())
         .then((data) => setProperties(data))
     }, [])

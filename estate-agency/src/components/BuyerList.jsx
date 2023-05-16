@@ -5,7 +5,7 @@ export default function BuyerList() {
     const [buyers, setBuyers] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:8000/buyer")
+        fetch("http://localhost:8080/buyer")
         .then((response) => response.json())
         .then((data) => setBuyers(data))
     }, [])
