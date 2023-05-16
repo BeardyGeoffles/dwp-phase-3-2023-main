@@ -13,6 +13,23 @@
   }
 }
 
+.navbar {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.navbar a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
