@@ -8,7 +8,7 @@ export default function SellerList() {
         fetch("http://localhost:8080/seller")
         .then((response) => response.json())
         .then((data) => setSellers(data))
-    }, [])
+    }, [sellers])
 
     return (
 

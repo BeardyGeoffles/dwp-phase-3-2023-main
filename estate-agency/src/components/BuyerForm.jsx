@@ -25,8 +25,6 @@ export default function BuyerForm(){
         setPostcode('');
         setPhone('');
 
-        window.location.reload(false);
-
     }
     
     return (
