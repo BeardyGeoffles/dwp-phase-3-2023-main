@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BsFillHouseAddFill} from "react-icons/bs"
 
 export default function PropertyForm(){
     
@@ -96,7 +97,7 @@ export default function PropertyForm(){
             onChange={(e)=> setBuyerId(parseInt(e.target.value))}/>   
 
 
-            <button>Add property</button>
+            <button><BsFillHouseAddFill /> Add property</button>
             
         </form>
     )
