@@ -1,55 +1,81 @@
-.App {
-  text-align: center;
+body {
+  background-color: rgb(220, 220, 220);
+flex-wrap: wrap;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a:hover {
+  color: darkred;
 }
 
 .navbar {
+  width: 100%;
   background-color: white;
   padding: 20px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  max-width: 600px;
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
 }
 
-.navbar a{
-  color: black;
+.navbar ul {
+  list-style: none;
+}
+
+.BuyerPage {
+  background-color: rgb(220, 220, 220);
+  padding: 1rem;
+}
+
+.buyer-list {
+  background-color: white;
+  padding: 1rem;
+}
+
+.buyer-form label {
+    border: 1px gray solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 15pt;
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: white;
+}
+
+.buyer-form input {
+  border: 1px rgb(128, 128, 128) solid;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 20px;
+  margin-bottom: 5px;
   font-weight: bold;
-  text-decoration: none;
-  display: flex;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  font-size: 15pt;
+  width: 200px;
+  display: inline-block;
+  vertical-align: top;
+  background-color: white;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+button{
+  border: 2px rgb(2, 88, 21) solid;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 15pt;
+  width: 200px;
+  display: inline-block;
+  vertical-align: top;
+  background-color: rgb(5, 156, 58);
 }
