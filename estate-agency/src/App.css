@@ -1,16 +1,26 @@
 body {
   background-color: rgb(220, 220, 220);
-flex-wrap: wrap;
 }
 
 a {
   color: black;
-  font-weight: bold;
   text-decoration: none;
+  border: 1px rgb(128, 128, 128) solid;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 12pt;
+  width: 200px;
+  display: inline-block;
+  vertical-align: top;
+  background-color: white;
 }
 
 a:hover {
-  color: darkred;
+  color: white;
+  background-color: rgb(87, 87, 87);
 }
 
 .navbar {
@@ -26,6 +36,7 @@ a:hover {
 
 .navbar ul {
   list-style: none;
+  text-align: center;
 }
 
 .BuyerPage {
@@ -33,9 +44,18 @@ a:hover {
   padding: 1rem;
 }
 
-.buyer-list {
+.buyer-display-short{
+  border: 1px gray solid;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 15pt;
+  width: 90%;
+  display:grid;
+  vertical-align: top;
   background-color: white;
-  padding: 1rem;
 }
 
 .buyer-form label {
@@ -67,7 +87,7 @@ a:hover {
   }
 
 button{
-  border: 2px rgb(2, 88, 21) solid;
+  border: 1px rgb(2, 88, 21) solid;
   border-radius: 5px;
   padding: 5px;
   margin-right: 20px;
@@ -78,4 +98,9 @@ button{
   display: inline-block;
   vertical-align: top;
   background-color: rgb(5, 156, 58);
+}
+
+button:hover{
+  color: white;
+  background-color: rgb(2, 83, 30);
 }

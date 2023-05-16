@@ -6,6 +6,9 @@ export default function BuyerPage() {
         <div className="BuyerPage">
 
             <BuyerForm />
+
+        <p>List of available buyers</p>
+
             <BuyerList />
 
         </div>
