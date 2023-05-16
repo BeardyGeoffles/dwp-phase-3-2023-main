@@ -65,23 +65,23 @@ export default function PropertyForm(){
 
             <label htmlFor="price">Price: £</label>
             <input type="number" required value={price} name="price" id="price" 
-            onChange={(e)=> setPrice(e.target.value)}/>
+            onChange={(e)=> setPrice(parseInt(e.target.value))}/>
 
             <label htmlFor="bedroom">Bedrooms: </label>
             <input type="number" required value={bedroom} name="bedroom" id="bedroom" 
-            onChange={(e)=> setBedroom(e.target.value)}/>
+            onChange={(e)=> setBedroom(parseInt(e.target.value))}/>
 
             <label htmlFor="bathroom">Bathrooms: </label>
             <input type="number" required value={bathroom} name="bathroom" id="bathroom" 
-            onChange={(e)=> setBathroom(e.target.value)}/>   
+            onChange={(e)=> setBathroom(parseInt(e.target.value))}/>   
 
             <label htmlFor="garden">Garden:</label>
             <input type="checkbox" required value={garden} name="garden" id="garden" 
-            onChange={(e)=> setGarden(e.target.value)}/>
+            onChange={(e)=> setGarden(e.target.checked ? 1 : 0)}/>
 
             <label htmlFor="sellerId">Seller Id: </label>
             <input type="number" required value={sellerId} name="sellerId" id="sellerId" 
-            onChange={(e)=> setSellerId(e.target.value)}/>   
+            onChange={(e)=> setSellerId(parseInt(e.target.value))}/>   
 
             <label htmlFor="status">Status:</label>
             <select name="status" id="status" required value={status}
@@ -93,7 +93,7 @@ export default function PropertyForm(){
 
             <label htmlFor="buyerId">Buyer Id: </label>
             <input type="number" value={buyerId} name="buyerId" id="buyerId" 
-            onChange={(e)=> setBuyerId(e.target.value)}/>   
+            onChange={(e)=> setBuyerId(parseInt(e.target.value))}/>   
 
 
             <button>Add property</button>
