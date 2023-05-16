@@ -42,7 +42,7 @@ export default function BuyerForm(){
 
             <label htmlFor="surname">Surname:</label>
             <input type="text" required value={surname} name="surname" id="surname" 
-            onChange={(e) => setSurname(e.target.value)}/>
+            onChange={(e) => setSurname(e.target.value)}/><br></br>
 
             <label htmlFor="address">Address:</label>
             <input type="text" required value={address} name="address" id="address" 
@@ -50,7 +50,7 @@ export default function BuyerForm(){
 
             <label htmlFor="postcode">Postcode:</label>
             <input type="text" required value={postcode} name="postcode" id="postcode" 
-            onChange={(e) => setPostcode(e.target.value)}/>
+            onChange={(e) => setPostcode(e.target.value)}/><br></br>
 
             <label htmlFor="phone">Phone:</label>
             <input type="tel" value={phone} name="phone" id="phone" 
