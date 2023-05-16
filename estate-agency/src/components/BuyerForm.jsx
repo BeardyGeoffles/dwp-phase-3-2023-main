@@ -8,7 +8,6 @@ export default function BuyerForm(){
     const [postcode, setPostcode] = useState('');
     const [phone, setPhone] = useState('');
 
-
     const handleSubmit = (event) => {
         event.preventDefault();
 
@@ -25,6 +24,8 @@ export default function BuyerForm(){
         setAddress('');
         setPostcode('');
         setPhone('');
+
+        window.location.reload(false);
 
     }
     
