@@ -9,7 +9,7 @@ export default function PropertyList() {
         fetch("http://localhost:8000/property")
         .then((response) => response.json())
         .then((data) => setProperties(data))
-    })
+    }, [])
 
     return (
 
