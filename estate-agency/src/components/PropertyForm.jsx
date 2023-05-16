@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BsFillHouseAddFill} from "react-icons/bs"
 
+
 export default function PropertyForm(){
     
     const [address, setAddress] = useState('');
@@ -98,6 +99,7 @@ export default function PropertyForm(){
 
 
             <button><BsFillHouseAddFill /> Add property</button>
+            
             
         </form>
     )
