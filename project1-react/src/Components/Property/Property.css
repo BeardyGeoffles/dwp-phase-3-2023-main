@@ -1,0 +1,65 @@
+.priceBlock {
+    border: 1px darkgreen solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 15pt;
+    min-width: 150px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+
+.priceBlock > span{
+    font-size: 13pt;
+    padding: 2px 10px 2px 10px;
+    border: 1px gray solid;
+    border-radius: 5px;
+}
+
+.priceBlock.withdrawn {
+    background-color: lightgray;
+    color: gray;
+}
+
+.priceBlock.withdrawn > span{
+    background-color: lightgray;
+}
+
+.priceBlock.forsale {
+    background-color: lightcyan;
+}
+
+.priceBlock.forsale > span{
+    background-color: green;
+    color: white;
+}
+
+.priceBlock.sold {
+    background-color: lightgoldenrodyellow;
+}
+
+.priceBlock.sold > span{
+    background-color: orange;
+    color: white;
+}
+
+.detailsBlock {
+    display: inline-block;
+    font-size: 12pt;
+}
+
+.detailsBlock > div:first-child {
+    font-weight: bold;
+}
+
+.detailsBlock i {
+    color: darkblue;
+    margin: 0 5px 0 0;
+}
+
+.detailsBlock i + span {
+    margin-right: 15px;
+}

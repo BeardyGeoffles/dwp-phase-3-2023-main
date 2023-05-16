@@ -1,0 +1,87 @@
+/*Include the padding and border in an element"s total width and height */
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: orange;
+}
+
+/*********************************************
+ * Restyle the <ul>
+ ********************************************/
+
+/* Remove margins and padding from the ul element (unordered lis)  so that the list is flushed with the
+   browser borders instead of leaving a gap */
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Each li element with the ul will hold a todo_item */
+ul li {
+    cursor: pointer;
+    padding: 12px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+}
+
+/* Set all odd list items to a different background colour (zebra-stripes) */
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+    background: #ddd;
+}
+
+/* When clicked on, change the background colour and strike out text */
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+label {
+    margin-top: 1px;
+    font-weight: bold;
+}
+
+/*********************************************
+ * Add padding to buttons
+ ********************************************/
+button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/*********************************************
+ * The i tag is repurposed for icons from BootStrap and FontAwesome
+ ********************************************/
+i {
+    margin-right: 10px;
+}
+
+.pageHeader {
+    margin: 0;
+    background-color: #004050;
+    padding: 5px 5px 5px 10px;
+    height: 50px;
+    font-size: 20pt;
+    color: white;
+}
+
+.message {
+    margin: 5px 0 5px 0;
+    text-align: center;
+    font-size: 20pt;
+}
+.message > span {
+    margin: 0 20px 0 20px;
+}

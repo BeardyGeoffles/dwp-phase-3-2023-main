@@ -1,0 +1,37 @@
+body {
+    padding-top: 200px !important;
+}
+
+/*todo need fix*/
+@media (max-width: 979px) {
+    body {
+        padding-top: 0;
+    }
+}
+
+.header {
+    margin: 0;
+    background-image: url("../../image/qa.png");
+    background-repeat: no-repeat;
+    background-size: 80px;
+    height: 80px;
+    font-size: 35pt;
+    font-weight: bold;
+    padding: 0 0 0 100px;
+}
+
+.block {
+    background: #004050;
+    padding: 15px 0 0 0;
+    height: 80px;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 1px;
+}
+.subtext {
+    font-size: 20px;
+    font-weight: normal;
+}

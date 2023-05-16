@@ -1,0 +1,13 @@
+.sellerBlock {
+    border: 1px gray solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 15pt;
+    width: 250px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: white;
+}
