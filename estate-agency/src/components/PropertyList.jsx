@@ -1,4 +1,3 @@
-import itemsData from '../data/db.json';
 import { useEffect, useState } from 'react';
 
 export default function PropertyList() {
@@ -16,7 +15,9 @@ export default function PropertyList() {
         <div className="property-list">
 
                 {properties.map((item) => (
-                    <div>{item.address}</div>
+                    <div className="property-display-short">
+                        <div>{item.address}, {item.postcode}</div>
+                    </div>
                 ))}
 
 
