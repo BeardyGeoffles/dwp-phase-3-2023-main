@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import {FaShower,FaBed} from "react-icons/fa"
+import {TbGardenCart} from "react-icons/tb"
 
 export default function PropertyList() {
 
@@ -16,7 +18,8 @@ export default function PropertyList() {
 
                 {properties.map((item) => (
                     <div className="property-display-short">
-                        <div>{item.address}, {item.postcode}</div>
+                        <div>{item.address}, {item.postcode}<br></br>
+                         <FaShower /> {item.bathroom}, <FaBed /> {item.bedroom}, <TbGardenCart /> {item.garden}</div>
                     </div>
                 ))}
 

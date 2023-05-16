@@ -86,7 +86,7 @@
       "price": 100000,
       "bedroom": 3,
       "bathroom": 1,
-      "garden": 0,
+      "garden": "NONE",
       "sellerId": 1,
       "status": "SOLD",
       "buyerId": 3
@@ -99,7 +99,7 @@
       "price": 200000,
       "bedroom": 1,
       "bathroom": 1,
-      "garden": 0,
+      "garden": "NONE",
       "sellerId": 1,
       "status": "SOLD",
       "buyerId": 3
@@ -111,7 +111,7 @@
       "price": 125000,
       "bedroom": 1,
       "bathroom": 1,
-      "garden": 1,
+      "garden": "BACK",
       "sellerId": 3,
       "status": "FOR SALE",
       "id": 3
@@ -123,10 +123,23 @@
       "price": 99000,
       "bedroom": 3,
       "bathroom": 3,
-      "garden": 1,
+      "garden": "BACK",
       "sellerId": 4,
       "status": "SOLD",
       "id": 4
+    },
+    {
+      "address": "3 Tester Street",
+      "postcode": "TS1 1ST",
+      "type": "",
+      "price": 150000,
+      "bedroom": 3,
+      "bathroom": 2,
+      "garden": "BOTH",
+      "sellerId": 4,
+      "status": "",
+      "buyerId": "",
+      "id": 5
     }
   ],
   "buyer": [
