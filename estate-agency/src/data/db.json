@@ -145,6 +145,14 @@
       "postcode": "W1",
       "phone": "",
       "id": 3
+    },
+    {
+      "firstName": "Tester",
+      "surname": "Testerly",
+      "address": "1234 Test Street",
+      "postcode": "TE12 34ST",
+      "phone": "12345",
+      "id": 4
     }
   ],
   "booking": [
