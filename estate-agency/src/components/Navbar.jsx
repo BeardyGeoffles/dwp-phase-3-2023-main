@@ -1,22 +1,18 @@
 import { Link } from "react-router-dom"
+import image from "../images/logo.png"
 
 export default function Navbar() {
     return (
         
         <div className="navbar">
-
-            <h1>Estate Agency</h1>
-
-
+            <img src={image} width="300px" alt="logo" />
+            <h1>East Properties</h1>
         <ul>
-
             <li><Link to="/">Home</Link></li>
             <li><Link to="/property">Properties</Link></li>
             <li><Link to="/buyer">Buyers</Link></li>
             <li><Link to="/seller">Sellers</Link></li>
             <li><Link to="/booking">Bookings</Link></li>
-
-
         </ul>
 
         </div>
