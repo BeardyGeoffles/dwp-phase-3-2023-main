@@ -94,7 +94,7 @@ button{
   margin-bottom: 5px;
   font-weight: bold;
   font-size: 15pt;
-  width: 200px;
+  width: 212px;
   display: inline-block;
   vertical-align: top;
   background-color: rgb(5, 156, 58);
@@ -104,3 +104,75 @@ button:hover{
   color: white;
   background-color: rgb(2, 83, 30);
 }
+
+/* Property CSS */
+.PropertyPage {
+  background-color: rgb(220, 220, 220);
+  padding: 1rem;
+}
+
+.property-display-short{
+  border: 1px gray solid;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 15pt;
+  width: 90%;
+  display:grid;
+  vertical-align: top;
+  background-color: white;
+}
+
+.property-form label {
+    border: 1px gray solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 15pt;
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: white;
+}
+
+.property-form input {
+  border: 1px rgb(128, 128, 128) solid;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 15pt;
+  width: 200px;
+  display: inline-block;
+  vertical-align: top;
+  background-color: white;
+  }
+
+  .property-form select {
+    border: 1px rgb(128, 128, 128) solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 15pt;
+    width: 212px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: white;
+    }
+
+    input[type=checkbox]
+    {
+      -ms-transform: scale(2); /* IE */
+      -moz-transform: scale(2); /* FF */
+      -webkit-transform: scale(2); /* Safari and Chrome */
+      -o-transform: scale(2); /* Opera */
+      transform: scale(2);
+      padding: 10px;
+    }

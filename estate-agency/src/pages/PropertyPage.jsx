@@ -6,7 +6,7 @@ export default function PropertyPage() {
         <div className="PropertyPage">
             
             <PropertyForm />
-
+            <h2>List of available properties</h2>
             <PropertyList />
 
         </div>

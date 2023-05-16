@@ -7,7 +7,7 @@ export default function BuyerPage() {
 
             <BuyerForm />
 
-        <p>List of available buyers</p>
+        <h2>List of available buyers</h2>
 
             <BuyerList />
 
