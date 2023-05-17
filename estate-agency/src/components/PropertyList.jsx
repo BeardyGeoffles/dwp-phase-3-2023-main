@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import {TbBed, TbBath} from "react-icons/tb"
+import styles from './test.css'
 
 export default function PropertyList() {
 
     const [properties, setProperties] = useState([]);
+    const [propertyUpdated, setPropertyUpdated] = useState(false);
 
     function getStatus(status) {
         switch(status) {
@@ -16,11 +18,74 @@ export default function PropertyList() {
         }
     }
 
+    function getButtons(item) {
+        switch (item.status) {
+            case 'FOR SALE':
+                return (
+                    <div className='property-buttons'>
+                <button className='property-button' onClick={() => setSold(item)}>Set Sold</button>  
+                <button className='property-button' onClick={() => withdraw(item)}>Withdraw</button>
+                </div>
+                )
+            case 'SOLD':
+                return (
+                <div className='property-buttons'>
+                <button className='property-button' onClick={() => setForSale(item)}>Set For Sale</button>  
+                </div>
+                )
+            case 'WITHDRAWN':
+                return (
+                <div className='property-buttons'>
+                <button className='property-button' onClick={() => setForSale(item)}>Set For Sale</button>  
+                </div>
+                )
+            default:
+                return (
+                    <div className='property-buttons'>
+                    <button className='property-button' onClick={() => setForSale(item)}>Set For Sale</button>  
+                    </div>
+                    )
+
+
+        }
+    }
+
+    function withdraw(item){
+        item.status = "WITHDRAWN"
+        fetch("http://localhost:8080/property/" + item.id, {
+            method: 'PUT',
+            headers: { "Content-Type": "application/json"},
+            body: JSON.stringify(item)
+        })
+        setPropertyUpdated(true);
+    }
+
+    function setSold(item){
+        item.status = "SOLD"
+        fetch("http://localhost:8080/property/" + item.id, {
+            method: 'PUT',
+            headers: { "Content-Type": "application/json"},
+            body: JSON.stringify(item)
+        })
+        setPropertyUpdated(true);
+    }
+
+    function setForSale(item){
+        item.status = "FOR SALE"
+        fetch("http://localhost:8080/property/" + item.id, {
+            method: 'PUT',
+            headers: { "Content-Type": "application/json"},
+            body: JSON.stringify(item)
+        })
+        setPropertyUpdated(true);
+    }
+
     useEffect(() => {
         fetch("http://localhost:8080/property")
         .then((response) => response.json())
         .then((data) => setProperties(data))
-    }, [])
+        setPropertyUpdated(false)
+    }, [propertyUpdated])
 
     return (
 
@@ -35,7 +100,10 @@ export default function PropertyList() {
                             <div class="desc">
                                 {getStatus(item.status)}<br></br>
                             {item.address}, {item.postcode}<br></br>
-                         {item.type} <TbBath /> {item.bathroom}, <TbBed /> {item.bedroom}</div>
+                         {item.type} <TbBath /> {item.bathroom}, <TbBed /> {item.bedroom}
+                         <br></br>
+                         {getButtons(item)}
+                         </div>
                          </div>
                     </div>
                 ))}
