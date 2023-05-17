@@ -25,24 +25,28 @@ export default function PropertyList() {
                     <div className='property-buttons'>
                 <button className='property-button' onClick={() => setSold(item)}>Set Sold</button>  
                 <button className='property-button' onClick={() => withdraw(item)}>Withdraw</button>
+                <button className='delete-button' onClick={() => propDelete(item)}>Delete</button>
                 </div>
                 )
             case 'SOLD':
                 return (
                 <div className='property-buttons'>
                 <button className='property-button' onClick={() => setForSale(item)}>Set For Sale</button>  
+                <button className='delete-button' onClick={() => propDelete(item)}>Delete</button>
                 </div>
                 )
             case 'WITHDRAWN':
                 return (
                 <div className='property-buttons'>
                 <button className='property-button' onClick={() => setForSale(item)}>Set For Sale</button>  
+                <button className='delete-button' onClick={() => propDelete(item)}>Delete</button>
                 </div>
                 )
             default:
                 return (
                     <div className='property-buttons'>
                     <button className='property-button' onClick={() => setForSale(item)}>Set For Sale</button>  
+                    <button className='delete-button' onClick={() => propDelete(item)}>Delete</button>
                     </div>
                     )
 
@@ -78,6 +82,17 @@ export default function PropertyList() {
             body: JSON.stringify(item)
         })
         setPropertyUpdated(true);
+    }
+
+    function propDelete(item){
+       if(window.confirm(`Are you sure you want to delete: ${item.address}?`) == true){
+        fetch("http://localhost:8080/property/" + item.id, {
+            method: 'DELETE',
+            headers: { "Content-Type": "application/json"},
+            body: JSON.stringify(item)
+        })
+        setPropertyUpdated(true); 
+       }
     }
 
     useEffect(() => {

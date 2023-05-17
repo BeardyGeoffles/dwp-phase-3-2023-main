@@ -9,3 +9,10 @@
     font-size: .8rem;
     background-color: lightblue;
 }
+
+.delete-button {
+    max-width: 100px;
+    font-size: .8rem;
+    background-color: darkred;
+    color: white;
+}
