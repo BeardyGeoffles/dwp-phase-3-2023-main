@@ -1,6 +1,35 @@
+/* Generic CSS */
+
 body {
   background-color: rgb(220, 220, 220);
 }
+
+h5{
+  padding:0;
+  margin: 0;
+}
+
+
+button{
+  border: 1px rgb(2, 88, 21) solid;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 15pt;
+  width: 212px;
+  display: inline-block;
+  vertical-align: top;
+  background-color: rgb(5, 156, 58);
+}
+
+button:hover{
+  color: white;
+  background-color: rgb(2, 83, 30);
+}
+
+/* Navbar CSS */
 
 a {
   color: black;
@@ -17,11 +46,6 @@ a {
   display: inline-block;
   vertical-align: top;
   background-color: white;
-}
-
-h5{
-  padding:0;
-  margin: 0;
 }
 
 #east {
@@ -66,6 +90,8 @@ a:hover {
   align-items: right;
   text-align: center;
 }
+
+/* Buyer CSS */
 
 .BuyerPage {
   background-color: rgb(220, 220, 220);
@@ -114,24 +140,55 @@ a:hover {
   background-color: white;
   }
 
-button{
-  border: 1px rgb(2, 88, 21) solid;
+  /* Seller CSS */
+
+.SellerPage {
+  background-color: rgb(220, 220, 220);
+  padding: 1rem;
+}
+
+.seller-display-short{
+  border: 1px gray solid;
   border-radius: 5px;
   padding: 5px;
   margin-right: 20px;
   margin-bottom: 5px;
   font-weight: bold;
   font-size: 15pt;
-  width: 212px;
-  display: inline-block;
+  width: 90%;
+  display:grid;
   vertical-align: top;
-  background-color: rgb(5, 156, 58);
+  background-color: white;
 }
 
-button:hover{
-  color: white;
-  background-color: rgb(2, 83, 30);
+.seller-form label {
+    border: 1px gray solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 15pt;
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: white;
 }
+
+.seller-form input {
+  border: 1px rgb(128, 128, 128) solid;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 15pt;
+  width: 200px;
+  display: inline-block;
+  vertical-align: top;
+  background-color: white;
+  }
+
 
 /* Property CSS */
 .PropertyPage {
@@ -228,6 +285,10 @@ button:hover{
     text-align: center;
     border-radius: 5px;
   }
+
+
+  /* Media CSS - needs to be at the bottom */
+
 
   @media (max-width: 1000px) {
     .navbar {

@@ -7,6 +7,8 @@ export default function SellerPage() {
             
             <SellerForm />
 
+            <h2>List of available sellers</h2>
+
             <SellerList />
         </div>
     );
