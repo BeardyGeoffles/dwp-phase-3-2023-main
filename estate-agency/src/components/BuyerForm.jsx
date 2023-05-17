@@ -54,7 +54,7 @@ export default function BuyerForm(){
 
             <label htmlFor="phone">Phone:</label>
             <input type="tel" value={phone} name="phone" id="phone" 
-            onChange={(e) => setPhone(e.target.value)}/>
+            onChange={(e) => setPhone(e.target.value)}/><br></br>
 
             <button>Add buyer</button>
             

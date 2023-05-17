@@ -104,7 +104,7 @@ export default function PropertyForm(){
 
             <label htmlFor="buyerId">Buyer Id: </label>
             <input type="number" value={buyerId} name="buyerId" id="buyerId" 
-            onChange={(e)=> setBuyerId(parseInt(e.target.value))}/>   
+            onChange={(e)=> setBuyerId(parseInt(e.target.value))}/><br></br>
 
 
             <button><BsFillHouseAddFill /> Add property</button>

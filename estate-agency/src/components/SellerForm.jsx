@@ -55,7 +55,8 @@ export default function SellerForm(){
 
             <label htmlFor="phone">Phone:</label>
             <input type="tel" value={phone} name="phone" id="phone" 
-            onChange={(e) => setPhone(e.target.value)}/>
+            onChange={(e) => setPhone(e.target.value)}/><br></br>
+
 
             <button>Add seller</button>
             

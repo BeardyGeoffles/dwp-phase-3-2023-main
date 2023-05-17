@@ -9,6 +9,11 @@ h5{
   margin: 0;
 }
 
+.grid-container {
+  max-width: 830px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
 button{
   border: 1px rgb(2, 88, 21) solid;
@@ -18,7 +23,8 @@ button{
   margin-bottom: 5px;
   font-weight: bold;
   font-size: 15pt;
-  width: 212px;
+  width: 392px;
+  max-width: 807px;
   display: inline-block;
   vertical-align: top;
   background-color: rgb(5, 156, 58);
@@ -113,17 +119,17 @@ a:hover {
 }
 
 .buyer-form label {
-    border: 1px gray solid;
+    /* border: 1px gray solid; */
     border-radius: 5px;
     padding: 5px;
     margin-right: 20px;
     margin-bottom: 5px;
     font-weight: bold;
     font-size: 15pt;
-    width: 200px;
+    width: 150px;
     display: inline-block;
     vertical-align: top;
-    background-color: white;
+    /* background-color: white; */
 }
 
 .buyer-form input {
@@ -162,17 +168,17 @@ a:hover {
 }
 
 .seller-form label {
-    border: 1px gray solid;
+    /* border: 1px gray solid; */
     border-radius: 5px;
     padding: 5px;
     margin-right: 20px;
     margin-bottom: 5px;
     font-weight: bold;
     font-size: 15pt;
-    width: 200px;
+    width: 150px;
     display: inline-block;
     vertical-align: top;
-    background-color: white;
+    /* background-color: white; */
 }
 
 .seller-form input {
@@ -211,17 +217,17 @@ a:hover {
 }
 
 .property-form label {
-    border: 1px gray solid;
+    /* border: 1px gray solid; */
     border-radius: 5px;
     padding: 5px;
     margin-right: 20px;
     margin-bottom: 5px;
     font-weight: bold;
     font-size: 15pt;
-    width: 200px;
+    width: 150px;
     display: inline-block;
     vertical-align: top;
-    background-color: white;
+    /* background-color: white; */
 }
 
 .property-form input {
