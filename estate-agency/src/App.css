@@ -18,6 +18,19 @@ a {
   background-color: white;
 }
 
+#east {
+  color: black;
+  box-shadow: 0 5px 5px;
+  border: 2px rgb(128, 128, 128) solid;
+  border-radius: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 300px;
+  vertical-align: top;
+  background-color: white;
+}
+
+
 a:hover {
   color: white;
   background-color: rgb(87, 87, 87);
@@ -208,4 +221,17 @@ button:hover{
     border: 1px solid black;
     text-align: center;
     border-radius: 5px;
+  }
+
+  @media (max-width: 1000px) {
+    .navbar {
+      flex-direction: column;
+      background-color: white;
+    };
+  }
+
+  @media (max-width: 1000px) {
+    #logo {
+      display: none;
+    };
   }
