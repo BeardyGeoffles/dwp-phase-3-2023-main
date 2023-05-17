@@ -182,3 +182,30 @@ button:hover{
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: 5px;
      }
+
+  .status-for-sale {
+    background-color: green;
+    max-width: 140px;
+    color: white;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .status-withdrawn {
+    background-color: gray;
+    max-width: 140px;
+    color: black;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .status-sold{
+    background-color: red;
+    max-width: 140px;
+    color: white;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+  }

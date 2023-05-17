@@ -140,6 +140,19 @@
       "status": "",
       "buyerId": "",
       "id": 5
+    },
+    {
+      "address": "1234 Test Street",
+      "postcode": "TE12 34ST",
+      "type": "BUNGALOW",
+      "price": 12345,
+      "bedroom": 1,
+      "bathroom": 2,
+      "garden": "BOTH",
+      "sellerId": 1,
+      "status": "WITHDRAWN",
+      "buyerId": 2,
+      "id": 6
     }
   ],
   "buyer": [
