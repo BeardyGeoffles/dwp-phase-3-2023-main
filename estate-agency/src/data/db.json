@@ -137,7 +137,7 @@
       "bathroom": 2,
       "garden": "BOTH",
       "sellerId": 4,
-      "status": "",
+      "status": "FOR SALE",
       "buyerId": "",
       "id": 5
     },
@@ -219,6 +219,14 @@
       "postcode": "OO55 5OO",
       "phone": "78878778776",
       "id": 8
+    },
+    {
+      "firstName": "Daniel",
+      "surname": "Buyanov",
+      "address": "1 The Strand",
+      "postcode": "LD1 1DN",
+      "phone": "01432292721",
+      "id": 9
     }
   ],
   "booking": [

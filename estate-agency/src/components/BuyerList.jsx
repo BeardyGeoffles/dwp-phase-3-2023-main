@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import {AiOutlineIdcard, AiOutlineHome, AiOutlinePhone} from "react-icons/ai"
 
 export default function BuyerList() {
 
@@ -16,7 +17,9 @@ export default function BuyerList() {
 
                 {buyers.map((item) => (
                     <div className="buyer-display-short">
-                        <div>{item.firstName} {item.surname}</div>
+                        <div><AiOutlineIdcard /> {item.firstName} {item.surname}<br></br>
+                        <h5><AiOutlineHome /> {item.address}<br></br>
+                        <AiOutlinePhone /> {item.phone}</h5></div>
                     </div>
                 ))}
 
