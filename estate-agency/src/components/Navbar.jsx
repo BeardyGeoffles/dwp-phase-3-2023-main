@@ -1,9 +1,6 @@
 import { Link } from "react-router-dom"
-import image from "../images/logo.png"
 import { BsCalendar, BsFillHouseFill, BsPersonFill, BsCash} from "react-icons/bs"
-
 import logo from "../images/logo.png"
-import { BsFillHouseFill} from "react-icons/bs"
 import east from "../images/East.png"
 
 export default function Navbar() {
