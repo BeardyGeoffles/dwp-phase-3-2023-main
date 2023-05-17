@@ -26,16 +26,25 @@ a:hover {
 .navbar {
   width: 100%;
   background-color: white;
-  padding: 20px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap:wrap;
   align-items: center;
-  margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.navbar h1{
+  background-color: aqua;
 }
 
 .navbar ul {
   list-style: none;
+  margin: 10px;
+}
+
+.navbar li {
+  float: center;
+  align-items: right;
   text-align: center;
 }
 
