@@ -7,10 +7,10 @@ export default function PropertyList() {
     const [properties, setProperties] = useState([]);
     const [propertyUpdated, setPropertyUpdated] = useState(false);
 
-    function getStatus(status) {
-        switch(status) {
+    function getStatus(item) {
+        switch(item.status) {
             case 'FOR SALE':
-                return <div className='status-for-sale'>FOR SALE</div>
+                return <div className='status-for-sale'>FOR SALE - £{item.price.toLocaleString()}</div>
             case 'SOLD':
                 return <div className='status-sold'>SOLD</div>
             case 'WITHDRAWN':
@@ -98,7 +98,7 @@ export default function PropertyList() {
                             <img src="https://www.saarescue.co.uk/wp-content/uploads/2017/10/Awaiting-Image.jpg" width="200px" alt="" />
                             </div>
                             <div class="desc">
-                                {getStatus(item.status)}<br></br>
+                                {getStatus(item)}<br></br>
                             {item.address}, {item.postcode}<br></br>
                          {item.type} <TbBath /> {item.bathroom}, <TbBed /> {item.bedroom}
                          <br></br>
