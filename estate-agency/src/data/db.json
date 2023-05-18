@@ -67,14 +67,6 @@
       "postcode": "",
       "phone": "",
       "id": 11
-    },
-    {
-      "firstName": "Tester",
-      "surname": "Testerly",
-      "address": "1234 Test Street",
-      "postcode": "BB987654",
-      "phone": "",
-      "id": 12
     }
   ],
   "property": [
@@ -208,22 +200,6 @@
       "postcode": "ddfgdfg",
       "phone": "999",
       "id": 5
-    },
-    {
-      "firstName": "sdfsdfsd",
-      "surname": "Young",
-      "address": "dfgdfg",
-      "postcode": "BB987654",
-      "phone": "",
-      "id": 6
-    },
-    {
-      "firstName": "AAA",
-      "surname": "BBB",
-      "address": "CCC",
-      "postcode": "DDD",
-      "phone": "",
-      "id": 7
     },
     {
       "firstName": "Mickey",
