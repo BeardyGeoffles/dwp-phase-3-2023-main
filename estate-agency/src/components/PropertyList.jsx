@@ -15,6 +15,8 @@ export default function PropertyList() {
                 return <div className='status-sold'>SOLD</div>
             case 'WITHDRAWN':
                 return <div className='status-withdrawn'>WITHDRAWN</div>
+            default:
+                return 
         }
     }
 
@@ -89,7 +91,7 @@ export default function PropertyList() {
     }
 
     function propDelete(item){
-       if(window.confirm(`Are you sure you want to delete: ${item.address}?`) == true){
+       if(window.confirm(`Are you sure you want to delete: ${item.address}?`) === true){
         fetch("http://localhost:8080/property/" + item.id, {
             method: 'DELETE',
             headers: { "Content-Type": "application/json"},
