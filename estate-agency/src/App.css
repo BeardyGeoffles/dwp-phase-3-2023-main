@@ -134,6 +134,7 @@ a:hover {
   text-align: center;
   color: white;
   font-weight: bold;
+  bottom: 0;
 }
 
 .footer h4{
@@ -244,7 +245,13 @@ a:hover {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
   }
-
+  .reviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    font-size: small;
+    justify-items: center;
+  }
 /* Property CSS */
 .PropertyPage {
   background-color: rgb(220, 220, 220);
@@ -371,5 +378,14 @@ a:hover {
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 20px;
+    };
+  }
+
+  @media (max-width: 1000px) {
+    .reviews {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        font-size:x-small;
     };
   }
