@@ -1,16 +1,20 @@
+import city from "../images/city.jpeg";
+import Footer from "../components/Footer";
+
 export default function HomePage() {
+
     return (
-        <div className="HomePage">
-<h1>Cardboard box Estate Agent</h1>
-<p>Intro text - Ipso Bubble test text - </p>
-
-<p>**display recently added properties in carosel**</p>
-
-
-
+<div className="HomePage">
+    <div className="homeBox">
+            <img src={city} width="100%" alt="city"/>
+        <div className="top-left">
+            <h1>EAST Property: Property experts for over 25 years</h1>
         </div>
-
-
-
+    </div>
+        <Footer />
+</div>
     );
 }
+
+
+
