@@ -4,6 +4,10 @@ body {
   background-color: rgb(244, 243, 243);
 }
 
+h1{
+  text-align: center;
+}
+
 h5{
   padding:0;
   margin: 0;
@@ -94,6 +98,47 @@ a:hover {
   float: center;
   align-items: right;
   text-align: center;
+}
+
+/* HomePage CSS*/
+
+.homeBox {
+  padding: 0PX;
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(217, 217, 217);
+}
+
+.homeBox h1 {
+  color: white;
+  font-size: medium;
+}
+
+.top-left {
+  position:absolute ;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+  top: 10px;
+  right: 40px;
+  padding: 10px;
+  background-color: rgba(45, 45, 45, 0.5);
+  line-height: 30px;
+  text-align:justify;
+  width: 40%;
+}
+
+.footer{
+  width: 100%;
+  background-color: rgb(60, 60, 60);
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.footer h4{
+  text-align: left;
+  margin-left: 20px;
 }
 
 /* Buyer CSS */
@@ -196,7 +241,7 @@ a:hover {
 
   .formContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
   }
 
