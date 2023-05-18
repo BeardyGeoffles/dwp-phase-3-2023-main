@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import {AiOutlineIdcard, AiOutlineHome, AiOutlinePhone} from "react-icons/ai"
+import { Link } from 'react-router-dom';
 
 export default function SellerList() {
 
@@ -36,7 +37,7 @@ export default function SellerList() {
                         <h5><AiOutlineHome /> {item.address}<br></br>
                         <AiOutlinePhone /> {item.phone}</h5></div>
                         <div className='property-buttons'>           
-                        <button className='edit-button'>Edit</button>
+                        <Link to={`/seller/${item.id}/edit`} state={item} className='edit-button'>Edit</Link>
                         <button className='delete-button' onClick={() => sellerDelete(item)}>Delete</button>
                         </div>
                     </div>

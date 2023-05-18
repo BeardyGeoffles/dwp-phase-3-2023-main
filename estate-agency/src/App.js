@@ -3,8 +3,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage';
 import BookingPage from './pages/BookingPage';
 import BuyerPage from './pages/BuyerPage';
+import BuyerEditPage from './pages/BuyerEditPage';
 import PropertyPage from './pages/PropertyPage';
 import SellerPage from './pages/SellerPage';
+import SellerEditPage from './pages/SellerEditPage';
 import Navbar from './components/Navbar';
 
 function App() {
@@ -21,7 +23,8 @@ function App() {
             <Route path="/seller" element={<SellerPage />} />
             <Route path="/property" element={<PropertyPage />} />
             <Route path="/booking" element={<BookingPage />} />
-
+            <Route path="/buyer/:buyerID/edit" element={<BuyerEditPage />} />
+            <Route path="/seller/:sellerID/edit" element={<SellerEditPage />} />
         </Routes>
       </main>
 

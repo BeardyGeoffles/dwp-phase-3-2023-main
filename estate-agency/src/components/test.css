@@ -22,4 +22,16 @@
     font-size: .8rem;
     background-color: yellow;
     color: black;
+    text-align: center;
+    margin-top: 20px;
+    box-sizing: border-box;
+
+}
+
+.BuyerEditPage {
+    padding: 1rem;
+}
+
+.SellerEditPage {
+    padding: 1rem;
 }
