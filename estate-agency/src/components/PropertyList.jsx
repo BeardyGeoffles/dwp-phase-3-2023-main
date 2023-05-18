@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import {TbBed, TbBath} from "react-icons/tb"
+import { Link } from 'react-router-dom';
 import styles from './test.css'
 
 export default function PropertyList() {
@@ -27,7 +28,7 @@ export default function PropertyList() {
                     <div className='property-buttons'>
                 <button className='property-button' onClick={() => setSold(item)}>Set Sold</button>  
                 <button className='property-button' onClick={() => withdraw(item)}>Withdraw</button>
-                <button className='edit-button'>Edit</button>
+                <Link to={`/property/${item.id}/edit`} state={item} className='edit-button'>Edit</Link>
                 <button className='delete-button' onClick={() => propDelete(item)}>Delete</button>
                 </div>
                 )
@@ -35,7 +36,7 @@ export default function PropertyList() {
                 return (
                 <div className='property-buttons'>
                 <button className='property-button' onClick={() => setForSale(item)}>Set For Sale</button>  
-                <button className='edit-button'>Edit</button>
+                <Link to={`/property/${item.id}/edit`} state={item} className='edit-button'>Edit</Link>
                 <button className='delete-button' onClick={() => propDelete(item)}>Delete</button>
                 </div>
                 )
@@ -43,7 +44,7 @@ export default function PropertyList() {
                 return (
                 <div className='property-buttons'>
                 <button className='property-button' onClick={() => setForSale(item)}>Set For Sale</button>  
-                <button className='edit-button'>Edit</button>
+                <Link to={`/property/${item.id}/edit`} state={item} className='edit-button'>Edit</Link>
                 <button className='delete-button' onClick={() => propDelete(item)}>Delete</button>
                 </div>
                 )
@@ -51,7 +52,7 @@ export default function PropertyList() {
                 return (
                     <div className='property-buttons'>
                     <button className='property-button' onClick={() => setForSale(item)}>Set For Sale</button>  
-                    <button className='edit-button'>Edit</button>
+                    <Link to={`/property/${item.id}/edit`} state={item} className='edit-button'>Edit</Link>
                     <button className='delete-button' onClick={() => propDelete(item)}>Delete</button>
                     </div>
                     )

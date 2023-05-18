@@ -5,6 +5,7 @@ import BookingPage from './pages/BookingPage';
 import BuyerPage from './pages/BuyerPage';
 import BuyerEditPage from './pages/BuyerEditPage';
 import PropertyPage from './pages/PropertyPage';
+import PropertyEditPage from './pages/PropertyEditPage';
 import SellerPage from './pages/SellerPage';
 import SellerEditPage from './pages/SellerEditPage';
 import Navbar from './components/Navbar';
@@ -25,6 +26,7 @@ function App() {
             <Route path="/booking" element={<BookingPage />} />
             <Route path="/buyer/:buyerID/edit" element={<BuyerEditPage />} />
             <Route path="/seller/:sellerID/edit" element={<SellerEditPage />} />
+            <Route path="/property/:propertyID/edit" element={<PropertyEditPage />} />
         </Routes>
       </main>
 

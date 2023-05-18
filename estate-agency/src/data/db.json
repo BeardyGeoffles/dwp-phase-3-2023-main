@@ -71,7 +71,6 @@
   ],
   "property": [
     {
-      "id": 1,
       "address": "34 OK Place, OK Town",
       "postcode": "OK1 1OK",
       "type": "DETACHED",
@@ -80,8 +79,9 @@
       "bathroom": 1,
       "garden": "NONE",
       "sellerId": 1,
-      "status": "SOLD",
-      "buyerId": 3
+      "status": "FOR SALE",
+      "buyerId": 3,
+      "id": 1
     },
     {
       "id": 2,
@@ -97,7 +97,7 @@
       "buyerId": 3
     },
     {
-      "address": "2 Welsh Street, Ebbw Vale",
+      "address": "22 Welsh Street, Ebbw Vale",
       "postcode": "TR1 1GA",
       "type": "DETACHED",
       "price": 125000,
