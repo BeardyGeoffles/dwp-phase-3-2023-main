@@ -1,7 +1,7 @@
 /* Generic CSS */
 
 body {
-  background-color: rgb(220, 220, 220);
+  background-color: rgb(244, 243, 243);
 }
 
 h5{
@@ -19,6 +19,7 @@ button{
   border: 1px rgb(2, 88, 21) solid;
   border-radius: 5px;
   padding: 5px;
+  margin-top: 20px;
   margin-right: 20px;
   margin-bottom: 5px;
   font-weight: bold;
@@ -40,8 +41,8 @@ button:hover{
 a {
   color: black;
   text-decoration: none;
-  box-shadow: 0 5px 5px;
-  border: 1px rgb(128, 128, 128) solid;
+  /* box-shadow: 0 5px 5px; */
+  border: 1px rgb(0, 0, 0) solid;
   border-radius: 5px;
   padding: 5px;
   margin-right: 20px;
@@ -69,21 +70,19 @@ a {
 
 a:hover {
   color: white;
-  background-color: rgb(87, 87, 87);
+  background-color: rgb(39, 39, 39);
+  border-color: white;
+  border: 1px solid;
 }
 
 .navbar {
   width: 100%;
-  background-color: white;
+  background-color: rgb(60, 60, 60);
   display: flex;
   flex-wrap:wrap;
   align-items: center;
   text-align: center;
   justify-content: space-between;
-}
-
-.navbar h1{
-  background-color: aqua;
 }
 
 .navbar ul {
@@ -195,6 +194,11 @@ a:hover {
   background-color: white;
   }
 
+  .formContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
 
 /* Property CSS */
 .PropertyPage {
@@ -299,12 +303,28 @@ a:hover {
   @media (max-width: 1000px) {
     .navbar {
       flex-direction: column;
-      background-color: white;
+      background-color: rgb(60, 60, 60);
     };
   }
 
   @media (max-width: 1000px) {
     #logo {
       display: none;
+    };
+  }
+
+  @media (max-width: 1800px) {
+    .formContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    };
+  }
+  
+  @media (max-width: 900px) {
+    .formContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
     };
   }
