@@ -321,7 +321,7 @@ a:hover {
     };
   }
   
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     .formContainer {
         display: grid;
         grid-template-columns: 1fr;
