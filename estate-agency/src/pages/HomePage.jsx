@@ -1,5 +1,6 @@
 import city from "../images/city.jpeg";
 import Footer from "../components/Footer";
+import Testimonials from "../components/testimonials";
 
 export default function HomePage() {
 
@@ -11,7 +12,8 @@ export default function HomePage() {
             <h1>EAST Property: Property experts for over 25 years</h1>
         </div>
     </div>
-        <Footer />
+    <Testimonials />
+    <Footer />
 </div>
     );
 }
