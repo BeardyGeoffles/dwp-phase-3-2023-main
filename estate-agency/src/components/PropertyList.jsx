@@ -25,6 +25,7 @@ export default function PropertyList() {
                     <div className='property-buttons'>
                 <button className='property-button' onClick={() => setSold(item)}>Set Sold</button>  
                 <button className='property-button' onClick={() => withdraw(item)}>Withdraw</button>
+                <button className='edit-button'>Edit</button>
                 <button className='delete-button' onClick={() => propDelete(item)}>Delete</button>
                 </div>
                 )
@@ -32,6 +33,7 @@ export default function PropertyList() {
                 return (
                 <div className='property-buttons'>
                 <button className='property-button' onClick={() => setForSale(item)}>Set For Sale</button>  
+                <button className='edit-button'>Edit</button>
                 <button className='delete-button' onClick={() => propDelete(item)}>Delete</button>
                 </div>
                 )
@@ -39,6 +41,7 @@ export default function PropertyList() {
                 return (
                 <div className='property-buttons'>
                 <button className='property-button' onClick={() => setForSale(item)}>Set For Sale</button>  
+                <button className='edit-button'>Edit</button>
                 <button className='delete-button' onClick={() => propDelete(item)}>Delete</button>
                 </div>
                 )
@@ -46,6 +49,7 @@ export default function PropertyList() {
                 return (
                     <div className='property-buttons'>
                     <button className='property-button' onClick={() => setForSale(item)}>Set For Sale</button>  
+                    <button className='edit-button'>Edit</button>
                     <button className='delete-button' onClick={() => propDelete(item)}>Delete</button>
                     </div>
                     )

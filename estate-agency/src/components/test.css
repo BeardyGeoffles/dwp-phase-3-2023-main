@@ -16,3 +16,10 @@
     background-color: darkred;
     color: white;
 }
+
+.edit-button {
+    max-width: 100px;
+    font-size: .8rem;
+    background-color: yellow;
+    color: black;
+}
