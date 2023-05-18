@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BsFillHouseAddFill} from "react-icons/bs"
 
 
@@ -11,9 +11,25 @@ export default function PropertyForm(){
     const [bedroom, setBedroom] = useState('');
     const [bathroom, setBathroom] = useState('');
     const [garden, setGarden] = useState('');
-    const [sellerId, setSellerId] = useState('');
+    const [sellerId, setSellerId] = useState(0);
     const [status, setStatus] = useState('');
-    const [buyerId, setBuyerId] = useState('');
+    const [buyerId, setBuyerId] = useState(0);
+
+    const [buyers, setBuyers] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:8080/buyer")
+        .then((response) => response.json())
+        .then((data) => setBuyers(data))
+    }, [])
+
+    const [sellers, setSellers] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:8080/seller")
+        .then((response) => response.json())
+        .then((data) => setSellers(data))
+    }, [])
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -33,9 +49,9 @@ export default function PropertyForm(){
         setBedroom('');
         setBathroom('');
         setGarden('');
-        setSellerId('');
+        setSellerId(0);
         setStatus('');
-        setBuyerId('');
+        setBuyerId(0);
 
         window.location.reload();
 
@@ -97,10 +113,18 @@ export default function PropertyForm(){
                 <option value="NONE">None</option>
             </select><br></br>
             </div>
+            
             <div>
-            <label htmlFor="sellerId">Seller Id: </label>
-            <input type="number" required value={sellerId} name="sellerId" id="sellerId" 
-            onChange={(e)=> setSellerId(parseInt(e.target.value))}/>   
+            
+            <label htmlFor="seller">Seller:</label>
+            <select name="seller" id="seller" required value={sellerId}
+            onChange={(e)=> setSellerId(parseInt(e.target.value))}>
+            <option value={0} selected disabled>Please Select</option>
+            {sellers.map((item) => 
+                <option value={item.id}>{item.firstName} {item.surname}</option>
+            )}
+            </select>
+            
             </div>
             <div>
             <label htmlFor="status">Status:</label>
@@ -112,9 +136,16 @@ export default function PropertyForm(){
             </select><br></br>
             </div>
             <div>
-            <label htmlFor="buyerId">Buyer Id: </label>
-            <input type="number" value={buyerId} name="buyerId" id="buyerId" 
-            onChange={(e)=> setBuyerId(parseInt(e.target.value))}/><br></br>
+            <label htmlFor="buyer">Buyer:</label>
+            {/* <input type="number" value={buyerId} name="buyerId" id="buyerId" 
+            onChange={(e)=> setBuyerId(parseInt(e.target.value))}/><br></br> */}
+            <select name="buyer" id="buyer" value={buyerId}
+            onChange={(e)=> setBuyerId(parseInt(e.target.value))}>
+                <option value={0} selected disabled>Please Select</option>
+            {buyers.map((item) => 
+                <option value={item.id}>{item.firstName} {item.surname}</option>)}
+            </select>
+            
             </div>
 </div>
 

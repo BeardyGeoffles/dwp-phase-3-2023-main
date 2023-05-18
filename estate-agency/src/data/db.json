@@ -61,8 +61,8 @@
       "id": 10
     },
     {
-      "firstName": "",
-      "surname": "",
+      "firstName": "Tiny",
+      "surname": "Schmoosh",
       "address": "",
       "postcode": "",
       "phone": "",
@@ -153,6 +153,19 @@
       "status": "WITHDRAWN",
       "buyerId": 2,
       "id": 6
+    },
+    {
+      "address": "99 New Seller Street",
+      "postcode": "NS12345",
+      "type": "",
+      "price": 999,
+      "bedroom": 9,
+      "bathroom": 9,
+      "garden": "",
+      "sellerId": 8,
+      "status": "FOR SALE",
+      "buyerId": "",
+      "id": 7
     }
   ],
   "buyer": [
