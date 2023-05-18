@@ -28,6 +28,8 @@ export default function SellerList() {
 
         <div className="seller-list">
 
+        <h2>List of available sellers ({sellers.length})</h2>  
+
                 {sellers.map((item) => (
                     <div className="seller-display-short">
                         <div><AiOutlineIdcard /> {item.firstName} {item.surname}<br></br>

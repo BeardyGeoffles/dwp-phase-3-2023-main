@@ -28,6 +28,8 @@ export default function BuyerList() {
 
         <div className="buyer-list">
 
+                <h2>List of available buyers ({buyers.length})</h2>
+
                 {buyers.map((item) => (
                     <div className="buyer-display-short">
                         <div><AiOutlineIdcard /> {item.firstName} {item.surname}<br></br>

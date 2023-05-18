@@ -112,6 +112,8 @@ export default function PropertyList() {
 
         <div className="property-list">
 
+        <h2>List of available properties ({properties.length})</h2>
+
                 {properties.map((item) => (
                   <div className="property-display-short">
                         <div class="container">
