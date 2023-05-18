@@ -87,17 +87,17 @@ export default function PropertyForm(){
             </div>
             <div>
             <label htmlFor="price">Price: £</label>
-            <input type="number" required value={price} name="price" id="price" 
+            <input type="number" min="0" required value={price} name="price" id="price" 
             onChange={(e)=> setPrice(parseInt(e.target.value))}/><br></br>
             </div>
             <div>
             <label htmlFor="bedroom">Bedrooms: </label>
-            <input type="number" required value={bedroom} name="bedroom" id="bedroom" 
+            <input type="number" min="0" required value={bedroom} name="bedroom" id="bedroom" 
             onChange={(e)=> setBedroom(parseInt(e.target.value))}/>
             </div>
             <div>
             <label htmlFor="bathroom">Bathrooms: </label>
-            <input type="number" required value={bathroom} name="bathroom" id="bathroom" 
+            <input type="number" min="0" required value={bathroom} name="bathroom" id="bathroom" 
             onChange={(e)=> setBathroom(parseInt(e.target.value))}/>   <br></br>
             </div>
             {/* <label htmlFor="garden">Garden:</label>
