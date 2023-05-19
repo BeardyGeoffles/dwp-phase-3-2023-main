@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage';
 import BookingPage from './pages/BookingPage';
+import BookingEditPage from './pages/BookingEditPage';
 import BuyerPage from './pages/BuyerPage';
 import BuyerEditPage from './pages/BuyerEditPage';
 import PropertyPage from './pages/PropertyPage';
@@ -27,6 +28,7 @@ function App() {
             <Route path="/buyer/:buyerID/edit" element={<BuyerEditPage />} />
             <Route path="/seller/:sellerID/edit" element={<SellerEditPage />} />
             <Route path="/property/:propertyID/edit" element={<PropertyEditPage />} />
+            <Route path="/booking/:id/edit" element={<BookingEditPage /> } />
         </Routes>
       </main>
 
