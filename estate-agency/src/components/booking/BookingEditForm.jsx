@@ -14,8 +14,6 @@ export default function BookingEditForm() {
     const [bookingTime, setBookingTime] = useState(new Date(booking.time).getHours());
     const [buyerId, setBuyerId] = useState(booking.buyerId);
 
-    console.log(bookingDate)
-
     const [properties, setProperties] = useState([]);
     const [buyers, setBuyers] = useState([]);
     const [bookings, setBookings] = useState([]);

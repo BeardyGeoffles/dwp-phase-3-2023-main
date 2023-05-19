@@ -79,7 +79,7 @@
       "bathroom": 1,
       "garden": "NONE",
       "sellerId": 1,
-      "status": "SOLD",
+      "status": "FOR SALE",
       "buyerId": 3,
       "id": 1
     },
@@ -93,7 +93,7 @@
       "bathroom": 1,
       "garden": "NONE",
       "sellerId": 1,
-      "status": "SOLD",
+      "status": "FOR SALE",
       "buyerId": 3
     },
     {
@@ -105,7 +105,7 @@
       "bathroom": 1,
       "garden": "BACK",
       "sellerId": 3,
-      "status": "FOR SALE",
+      "status": "SOLD",
       "id": 3
     },
     {
@@ -129,7 +129,7 @@
       "bathroom": 2,
       "garden": "BOTH",
       "sellerId": 4,
-      "status": "FOR SALE",
+      "status": "SOLD",
       "buyerId": "",
       "id": 5
     },
@@ -142,7 +142,7 @@
       "bathroom": 2,
       "garden": "BOTH",
       "sellerId": 1,
-      "status": "FOR SALE",
+      "status": "SOLD",
       "buyerId": 2,
       "id": 6
     },
@@ -150,12 +150,12 @@
       "address": "99 New Seller Street",
       "postcode": "NS12345",
       "type": "",
-      "price": 999,
+      "price": 99999,
       "bedroom": 9,
       "bathroom": 9,
       "garden": "",
       "sellerId": 8,
-      "status": "FOR SALE",
+      "status": "SOLD",
       "buyerId": "",
       "id": 7
     }
@@ -230,6 +230,12 @@
       "time": "2023-05-20T11:00:00.000Z",
       "buyerId": 1,
       "id": 2
+    },
+    {
+      "propertyId": 3,
+      "time": "2023-05-20T12:00:00.000Z",
+      "buyerId": 2,
+      "id": 3
     }
   ]
 }
