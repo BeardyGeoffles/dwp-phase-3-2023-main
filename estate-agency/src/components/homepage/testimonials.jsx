@@ -7,10 +7,10 @@ export default function Testimonials() {
         
      <div className="reviews">
         <div>
-            <h1><br></br>“Jane ensured we had an amazing experience.<br></br>
+            <h6><br></br>“Jane ensured we had an amazing experience.<br></br>
                 Excellent sales experience,<br></br>
                 excellent customer service<br></br>
-                and excellent after sales – extremely professional. “<br></br> </h1>
+                and excellent after sales – extremely professional. “<br></br> </h6>
         </div>
         <div>
             <img src={jane} width="400px" alt="" />
@@ -20,9 +20,9 @@ export default function Testimonials() {
             <img src={will} width="400px" alt="" />
         </div>
         <div>
-            <h1><br></br>“Very pleased with the services offered by William at East. <br></br>
+            <h6><br></br>“Very pleased with the services offered by William at East. <br></br>
             He was extremely helpful during the sale of our property<br></br>
-            and would definitely recommend.“<br></br></h1>
+            and would definitely recommend.“<br></br></h6>
         </div>
 
 </div>
