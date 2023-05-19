@@ -1,5 +1,7 @@
 
 import { useEffect, useState} from "react"
+import { BsCalendarPlus} from "react-icons/bs";
+
 
 export default function BookingForm() {
 
@@ -62,7 +64,7 @@ export default function BookingForm() {
 
             <h2>Add a new booking</h2>
 
-            <div className="formContainer">
+            <div className="formContainerBook">
 
             <label htmlFor="propertyId">Property:</label>
             <select required value={propertyId} name="propertyId" id="propertyId" 
@@ -106,7 +108,7 @@ export default function BookingForm() {
 
             </select>
 
-            <button>Add booking</button>
+            <button><BsCalendarPlus /> Add booking</button>
 
 
             </div>

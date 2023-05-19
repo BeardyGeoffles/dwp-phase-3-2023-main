@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react';
+import styles from "./booking.css"
+import {BsCalendarDate } from "react-icons/bs";
+import {BiTime } from "react-icons/bi";
 
 export default function BookingList() {
 
@@ -14,11 +17,11 @@ export default function BookingList() {
 
         <div className="booking-list">
 
-                <h2>List of available bookings ({bookings.length})</h2>
+                <h2>List of bookings ({bookings.length})</h2>
 
                 {bookings.map((item) => (
                     <div className="booking-display-short">
-                        <div>ID: {item.id} Date: {new Date(item.time).toLocaleDateString('en-GB')} Time: {new Date(item.time).toLocaleTimeString()}</div>
+                        <div>ID: {item.id} <BsCalendarDate/> {new Date(item.time).toLocaleDateString('en-GB')} - <BiTime /> {new Date(item.time).toLocaleTimeString()}</div>
                     </div>
                 ))}
 
