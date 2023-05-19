@@ -5,6 +5,13 @@ import { BsCalendarPlus} from "react-icons/bs";
 
 export default function BookingForm() {
 
+    const [propertyId, setPropertyId] = useState(0);
+    const [bookingDate, setBookingDate] = useState('');
+    const [bookingTime, setBookingTime] = useState('');
+    const [buyerId, setBuyerId] = useState(0);
+
+
+
     const [properties, setProperties] = useState([]);
     const [buyers, setBuyers] = useState([]);
 
@@ -29,11 +36,23 @@ export default function BookingForm() {
 
             <div className="formContainerBook">
 
+            <label htmlFor="propertyId">Property:</label>
+            <select required value={propertyId} name="propertyId" id="propertyId" 
+            onChange={(e) => setPropertyId(e.target.value)}>
+                <option value="0" disabled>Please select</option>
+                { properties.filter((item) => item.status === 'FOR SALE').map((item) => 
+                <option>{item.address}</option>
+                )}
+
+            </select>
+
             <label htmlFor="bookingdate">Date:</label>
-            <input type="date" name="bookingdate" id="bookingdate"/>
+            <input required value={bookingDate} type="date" name="bookingdate" id="bookingdate"
+            onChange={(e) => setBookingDate(e.target.value)}/>
 
             <label htmlFor="bookingtime">Time: </label>
-            <select name="bookingtime" id="bookingtime">
+            <select required value={bookingTime} name="bookingtime" id="bookingtime"
+            onChange={(e) => setBookingTime(e.target.value)}>
                 <option value="8">8:00 am</option>
                 <option value="9">9:00 am</option>
                 <option value="10">10:00 am</option>
@@ -47,18 +66,14 @@ export default function BookingForm() {
 
             </select>
 
-            <label htmlFor="propertyId">Property:</label>
-            <select name="propertyId" id="propertyId">
-                { properties.filter((item) => item.status === 'FOR SALE').map((item) => 
-                <option>{item.address}</option>
-                )}
 
-            </select>
 
             <label htmlFor="buyerId">Buyer:</label>
-            <select name="buyerId" id="buyerId">
+            <select required value={buyerId} name="buyerId" id="buyerId"
+            onChange={(e) => setBuyerId(e.target.value)}>
+                <option value={0} disabled>Please select</option>
                 { buyers.map((item) => 
-                <option>{item.firstName} {item.surname}</option>
+                <option value={item.id}>{item.firstName} {item.surname}</option>
                 )}
 
             </select>
