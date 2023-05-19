@@ -13,6 +13,36 @@ export default function BookingForm() {
     const [properties, setProperties] = useState([]);
     const [buyers, setBuyers] = useState([]);
 
+    
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        console.log(bookingDate)
+        console.log(bookingTime)
+
+        let time = new Date(bookingDate)
+        time.setHours(bookingTime)
+
+        console.log(time.toJSON())
+
+        const newbooking = {propertyId, time, buyerId};
+
+        fetch('http://localhost:8080/booking', {
+            method: 'POST',
+            headers: { "Content-Type": "application/json"},
+            body: JSON.stringify(newbooking)
+        })
+
+        setPropertyId(0)
+        setBookingDate('')
+        setBookingTime('')
+        setBuyerId(0)
+
+        window.location.reload();
+
+    }
+    
+
     useEffect(() => {
         fetch("http://localhost:8080/property")
         .then((response) => response.json())
@@ -28,7 +58,7 @@ export default function BookingForm() {
     }, [] )
 
     return (
-        <form className="booking-form" action="">
+        <form className="booking-form" onSubmit={handleSubmit}>
 
             <h2>Add a new booking</h2>
 
@@ -36,10 +66,10 @@ export default function BookingForm() {
 
             <label htmlFor="propertyId">Property:</label>
             <select required value={propertyId} name="propertyId" id="propertyId" 
-            onChange={(e) => setPropertyId(e.target.value)}>
-                <option value="0" disabled>Please select</option>
+            onChange={(e) => setPropertyId(parseInt(e.target.value))}>
+                <option value="0" selected disabled>Please select</option>
                 { properties.filter((item) => item.status === 'FOR SALE').map((item) => 
-                <option>{item.address}</option>
+                <option value={item.id}>{item.address}</option>
                 )}
 
             </select>
@@ -56,11 +86,11 @@ export default function BookingForm() {
                 <option value="10">10:00 am</option>
                 <option value="11">11:00 am</option>
                 <option value="12">12:00 pm</option>
-                <option value="1">1:00 pm</option>
-                <option value="2">2:00 pm</option>
-                <option value="3">3:00 pm</option>
-                <option value="4">4:00 pm</option>
-                <option value="5">5:00 pm</option>
+                <option value="13">1:00 pm</option>
+                <option value="14">2:00 pm</option>
+                <option value="15">3:00 pm</option>
+                <option value="16">4:00 pm</option>
+                <option value="17">5:00 pm</option>
 
             </select>
 
@@ -68,8 +98,8 @@ export default function BookingForm() {
 
             <label htmlFor="buyerId">Buyer:</label>
             <select required value={buyerId} name="buyerId" id="buyerId"
-            onChange={(e) => setBuyerId(e.target.value)}>
-                <option value={0} disabled>Please select</option>
+            onChange={(e) => setBuyerId(parseInt(e.target.value))}>
+                <option value={0} selected disabled>Please select</option>
                 { buyers.map((item) => 
                 <option value={item.id}>{item.firstName} {item.surname}</option>
                 )}
