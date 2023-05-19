@@ -69,8 +69,8 @@ export default function BookingList() {
                 {bookings.map((item) => (
                     <div className="booking-display-short">
                         <div><BsCalendarDate/> {new Date(item.time).toLocaleDateString('en-GB')} - <BiTime /> {new Date(item.time).toLocaleTimeString()}</div>
-                        <div>{getAddress(item.propertyId)}</div>
-                        <div>{getBuyerName(item.buyerId)}</div>
+                        <div><BsHouseDoor/> {getAddress(item.propertyId)}</div>
+                        <div><BiUser /> {getBuyerName(item.buyerId)}</div>
                         <div className='property-buttons'>           
                         <Link to={`/booking/${item.id}/edit`} state={item} className='edit-button'>Edit</Link>
                         <button className='delete-button' onClick={() => bookingDelete(item)}>Delete</button>
