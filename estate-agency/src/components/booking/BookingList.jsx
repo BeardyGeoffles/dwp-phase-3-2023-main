@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from "./booking.css"
-import {BsCalendarDate } from "react-icons/bs";
-import {BiTime } from "react-icons/bi";
+import {BsCalendarDate,BsHouseDoor} from "react-icons/bs";
+import {BiTime,BiUser} from "react-icons/bi";
 import { Link } from 'react-router-dom';
 
 export default function BookingList() {
@@ -54,7 +54,7 @@ export default function BookingList() {
                 {bookings.map((item) => (
                     <div className="booking-display-short">
                         <div><BsCalendarDate/> {new Date(item.time).toLocaleDateString('en-GB')} - <BiTime /> {new Date(item.time).toLocaleTimeString()}</div>
-                        <div>{getAddress(item.propertyId)}</div>
+                        <div><BsHouseDoor/> {getAddress(item.propertyId)}</div>
                         <div className='property-buttons'>           
                         <Link to={`/booking/${item.id}/edit`} state={item} className='edit-button'>Edit</Link>
                         <button className='delete-button' onClick={() => bookingDelete(item)}>Delete</button>
