@@ -79,7 +79,7 @@
       "bathroom": 1,
       "garden": "NONE",
       "sellerId": 1,
-      "status": "FOR SALE",
+      "status": "WITHDRAWN",
       "buyerId": 3,
       "id": 1
     },
@@ -117,7 +117,7 @@
       "bathroom": 3,
       "garden": "BACK",
       "sellerId": 4,
-      "status": "SOLD",
+      "status": "FOR SALE",
       "id": 4
     },
     {
@@ -129,7 +129,7 @@
       "bathroom": 2,
       "garden": "BOTH",
       "sellerId": 4,
-      "status": "SOLD",
+      "status": "WITHDRAWN",
       "buyerId": "",
       "id": 5
     },
@@ -142,7 +142,7 @@
       "bathroom": 2,
       "garden": "BOTH",
       "sellerId": 1,
-      "status": "SOLD",
+      "status": "FOR SALE",
       "buyerId": 2,
       "id": 6
     },

@@ -9,6 +9,9 @@ export default function PropertyList() {
     const [properties, setProperties] = useState([]);
     const [propertyUpdated, setPropertyUpdated] = useState(false);
 
+    const [searchType, setSearchType] = useState("ANY")
+    const [searchStatus, setSearchStatus] = useState("ANY")
+
     function getStatus(item) {
         switch(item.status) {
             case 'FOR SALE':
@@ -110,13 +113,44 @@ export default function PropertyList() {
         setPropertyUpdated(false)
     }, [propertyUpdated])
 
+    function applySearch(property){
+        return (searchType === "ANY" || property.type === searchType) &&
+        (searchStatus === "ANY" || property.status === searchStatus)
+    }
+
+
     return (
 
         <div className="property-list">
 
-        <h2>List of available properties ({properties.length})</h2>
+        <form className="searchForm">
 
-                {properties.map((item) => (
+        <h2>Search Criteria</h2>
+
+            <label htmlFor="searchType">Type: </label>
+                <select value = {searchType} name="searchType" id="searchType"
+                onChange={(e)=>setSearchType(e.target.value)}>
+                <option value="ANY">Any</option>
+                <option value="DETACHED">Detached</option>
+                <option value="APARTMENT">Apartment</option>
+                <option value="SEMI-DETACHED">Semi-detached</option>
+                <option value="BUNGALOW">Bungalow</option>
+            </select>
+
+            <label htmlFor="searchStatus">Status: </label>
+                <select value = {searchStatus} name="searchStatus" id="searchStatus"
+                onChange={(e)=>setSearchStatus(e.target.value)}>
+                <option value="ANY">Any</option>
+                <option value="FOR SALE">For Sale</option>
+                <option value="SOLD">Sold</option>
+                <option value="WITHDRAWN">Withdrawn</option>
+            </select>
+
+        </form>
+
+        <h2>List of available properties ({properties.filter(applySearch).length}/{properties.length})</h2>
+
+                {properties.filter(applySearch).map((item) => (
                   <div className="property-display-short">
                         <div class="container">
                             <div class="image">
