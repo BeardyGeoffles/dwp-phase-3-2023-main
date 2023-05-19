@@ -8,6 +8,7 @@ export default function BookingList() {
 
     const [bookings, setBookings] = useState([]);
     const [properties, setProperties] = useState([]);
+    const [buyers, setBuyers] = useState([]);
 
     const [bookingUpdated, setBookingUpdated] = useState([false]);
 
@@ -24,6 +25,12 @@ export default function BookingList() {
         .then((data) => setProperties(data))
     }, [])
 
+    useEffect(() => {
+        fetch("http://localhost:8080/buyer")
+        .then((response) => response.json())
+        .then((data) => setBuyers(data))
+    }, [])
+
     function getAddress(propID)
     {
         let result = properties.find(prop => prop.id === propID)
@@ -31,6 +38,14 @@ export default function BookingList() {
             return result.address + ", " + result.postcode
         }
 
+    }
+
+    function getBuyerName(buyId)
+    {
+        let result = buyers.find(buyer => buyer.id === buyId)
+        if (result){
+            return result.firstName + " " + result.surname;
+        }
     }
 
     function bookingDelete(item)
@@ -54,7 +69,8 @@ export default function BookingList() {
                 {bookings.map((item) => (
                     <div className="booking-display-short">
                         <div><BsCalendarDate/> {new Date(item.time).toLocaleDateString('en-GB')} - <BiTime /> {new Date(item.time).toLocaleTimeString()}</div>
-                        <div><BsHouseDoor/> {getAddress(item.propertyId)}</div>
+                        <div>{getAddress(item.propertyId)}</div>
+                        <div>{getBuyerName(item.buyerId)}</div>
                         <div className='property-buttons'>           
                         <Link to={`/booking/${item.id}/edit`} state={item} className='edit-button'>Edit</Link>
                         <button className='delete-button' onClick={() => bookingDelete(item)}>Delete</button>
