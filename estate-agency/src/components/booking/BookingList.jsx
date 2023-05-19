@@ -14,9 +14,11 @@ export default function BookingList() {
 
         <div className="booking-list">
 
+                <h2>List of available bookings ({bookings.length})</h2>
+
                 {bookings.map((item) => (
                     <div className="booking-display-short">
-                        <div>ID: {item.buyerId} Time: {item.time}</div>
+                        <div>ID: {item.id} Date: {new Date(item.time).toLocaleDateString('en-GB')} Time: {new Date(item.time).toLocaleTimeString()}</div>
                     </div>
                 ))}
 
