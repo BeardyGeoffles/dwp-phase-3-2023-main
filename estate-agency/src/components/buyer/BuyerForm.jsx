@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaUserPlus} from "react-icons/fa";
 
 export default function BuyerForm(){
     
@@ -62,7 +63,7 @@ export default function BuyerForm(){
             onChange={(e) => setPhone(e.target.value)}/><br></br>
         </div>
     </div>
-            <button>Add buyer</button>
+            <button><FaUserPlus /> Add buyer</button>
             
         </form>
     )

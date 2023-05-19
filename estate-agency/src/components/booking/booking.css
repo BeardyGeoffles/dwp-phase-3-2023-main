@@ -1,0 +1,44 @@
+.BookingPage {
+    background-color: rgb(220, 220, 220);
+    padding: 1rem;
+  }
+  
+  .booking-display-short{
+    border: 1px gray solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 15pt;
+    width: 90%;
+    display:grid;
+    vertical-align: top;
+    background-color: white;
+  }
+  
+  .booking-form label {
+      border-radius: 5px;
+      padding: 5px;
+      margin-right: 20px;
+      margin-bottom: 5px;
+      font-weight: bold;
+      font-size: 15pt;
+      width: 150px;
+      display: inline-block;
+      vertical-align: top;
+  }
+  
+  .booking-form input {
+    border: 1px rgb(128, 128, 128) solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 15pt;
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: white;
+    }
