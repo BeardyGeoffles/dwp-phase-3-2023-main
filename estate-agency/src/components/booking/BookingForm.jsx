@@ -14,18 +14,21 @@ export default function BookingForm() {
 
     const [properties, setProperties] = useState([]);
     const [buyers, setBuyers] = useState([]);
+    const [bookings, setBookings] = useState([]);
 
     
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        console.log(bookingDate)
-        console.log(bookingTime)
-
         let time = new Date(bookingDate)
         time.setHours(bookingTime)
 
-        console.log(time.toJSON())
+        if (bookings.filter(booking => booking.time === time.toJSON() && booking.propertyId === propertyId).length > 0)
+        {
+            alert('Error: Booking already exists!');
+            return;
+        }
+
 
         const newbooking = {propertyId, time, buyerId};
 
@@ -56,6 +59,13 @@ export default function BookingForm() {
         fetch("http://localhost:8080/buyer")
         .then((response) => response.json())
         .then((data) => setBuyers(data))  
+
+    }, [] )
+
+    useEffect(()=> {
+        fetch("http://localhost:8080/booking")
+        .then((response) => response.json())
+        .then((data) => setBookings(data))  
 
     }, [] )
 
