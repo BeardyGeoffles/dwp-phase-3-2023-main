@@ -68,7 +68,7 @@ export default function BookingList() {
 
                 {bookings.map((item) => (
                     <div className="booking-display-short">
-                        <div><BsCalendarDate/> {new Date(item.time).toLocaleDateString('en-GB')} - <BiTime /> {new Date(item.time).toLocaleTimeString()}</div>
+                        <div><BsCalendarDate/> {new Date(item.time).toLocaleDateString('en-GB')} - <BiTime /> {new Date(item.time).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</div>
                         <div><BsHouseDoor/> {getAddress(item.propertyId)}</div>
                         <div><BiUser /> {getBuyerName(item.buyerId)}</div>
                         <div className='property-buttons'>           
