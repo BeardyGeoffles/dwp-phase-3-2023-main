@@ -87,7 +87,7 @@ export default function BookingForm() {
             </select>
 
             <label htmlFor="bookingdate">Date:</label>
-            <input required value={bookingDate} type="date" name="bookingdate" id="bookingdate"
+            <input required value={bookingDate} type="date" min={new Date().toISOString().split('T')[0]} name="bookingdate" id="bookingdate"
             onChange={(e) => setBookingDate(e.target.value)}/>
 
             <label htmlFor="bookingtime">Time: </label>
