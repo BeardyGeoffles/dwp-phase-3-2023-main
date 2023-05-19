@@ -220,33 +220,10 @@
   ],
   "booking": [
     {
-      "buyerId": 1,
-      "propertyId": 2,
-      "time": "2023-02-28T08:00:00.038Z",
-      "id": 2
-    },
-    {
-      "propertyId": 1,
-      "time": "2023-03-02T08:00:00.000Z",
-      "id": 3
-    },
-    {
-      "propertyId": "99 New Seller Street",
-      "time": "2023-05-04T08:00:00.000Z",
-      "buyerId": "3",
-      "id": 4
-    },
-    {
-      "propertyId": "6",
-      "time": "2023-06-08T02:00:00.000Z",
-      "buyerId": 5,
-      "id": 5
-    },
-    {
-      "propertyId": 6,
-      "time": "2023-05-20T16:00:00.000Z",
-      "buyerId": 8,
-      "id": 6
+      "propertyId": 3,
+      "time": "2023-05-20T10:00:00.000Z",
+      "buyerId": 3,
+      "id": 1
     }
   ]
 }
