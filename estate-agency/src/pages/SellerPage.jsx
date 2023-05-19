@@ -1,5 +1,5 @@
-import SellerList from "../components/SellerList";
-import SellerForm from "../components/SellerForm";
+import SellerList from "../components/seller/SellerList";
+import SellerForm from "../components/seller/SellerForm";
 
 export default function SellerPage() {
     return (

@@ -1,0 +1,140 @@
+/* Property CSS */
+.PropertyPage {
+    background-color: rgb(220, 220, 220);
+    padding: 1rem;
+  }
+  
+  .property-display-short{
+    border: 1px gray solid;
+    border-radius: 5px;
+    min-width: 450px;
+    padding: 5px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 15pt;
+    width: 90%;
+    display:grid;
+    vertical-align: top;
+    background-color: white;
+  }
+  
+  .property-form label {
+      border-radius: 5px;
+      padding: 5px;
+      margin-right: 20px;
+      margin-bottom: 5px;
+      font-weight: bold;
+      font-size: 15pt;
+      width: 150px;
+      display: inline-block;
+      vertical-align: top;
+  }
+  
+  .property-form input {
+    border: 1px rgb(128, 128, 128) solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 15pt;
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: white;
+    }
+  
+    .property-form select {
+      border: 1px rgb(128, 128, 128) solid;
+      border-radius: 5px;
+      padding: 5px;
+      margin-right: 20px;
+      margin-bottom: 5px;
+      font-weight: bold;
+      font-size: 15pt;
+      width: 212px;
+      display: inline-block;
+      vertical-align: top;
+      background-color: white;
+      }
+  
+      .container {
+        display: grid;
+        align-items: left; 
+        grid-template-columns: 1fr 7fr;
+        column-gap: 5px;
+       }
+  
+    .status-for-sale {
+      background-color: green;
+      max-width: 100%;
+      color: white;
+      border: 1px solid black;
+      text-align: center;
+      border-radius: 5px;
+    }
+  
+    .status-withdrawn {
+      background-color: gray;
+      max-width: 100%;
+      color: rgb(255, 255, 255);
+      border: 1px solid black;
+      text-align: center;
+      border-radius: 5px;
+    }
+  
+    .status-sold{
+      background-color: red;
+      max-width: 100%;
+      color: white;
+      border: 1px solid black;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+
+    /* test.css */
+
+    .property-buttons {
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+    
+    }
+    
+    .property-button {
+        max-width: 100px;
+        font-size: .8rem;
+        background-color: lightblue;
+    }
+    
+    .delete-button {
+        max-width: 100px;
+        font-size: .8rem;
+        background-color: darkred;
+        color: white;
+    }
+    
+    .edit-button {
+        max-width: 100px;
+        font-size: .8rem;
+        background-color: yellow;
+        color: black;
+        text-align: center;
+        margin-top: 20px;
+        box-sizing: border-box;
+    
+    }
+    
+    .BuyerEditPage {
+        padding: 1rem;
+    }
+    
+    .SellerEditPage {
+        padding: 1rem;
+    }
+    
+    .PropertyEditPage {
+        padding: 1rem;
+    }

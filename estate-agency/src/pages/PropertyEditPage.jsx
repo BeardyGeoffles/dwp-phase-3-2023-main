@@ -1,4 +1,4 @@
-import PropertyEditForm from "../components/PropertyEditForm";
+import PropertyEditForm from "../components/property/PropertyEditForm";
 import styles from "../components/test.css";
 
 export default function PropertyEditPage() {

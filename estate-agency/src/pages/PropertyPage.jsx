@@ -1,5 +1,5 @@
-import PropertyList from "../components/PropertyList";
-import PropertyForm from "../components/PropertyForm";
+import PropertyList from "../components/property/PropertyList";
+import PropertyForm from "../components/property/PropertyForm";
 
 export default function PropertyPage() {
     return (

@@ -1,4 +1,4 @@
-import BuyerEditForm from "../components/BuyerEditForm";
+import BuyerEditForm from "../components/buyer/BuyerEditForm";
 import styles from "../components/test.css";
 
 export default function BuyerEditPage() {

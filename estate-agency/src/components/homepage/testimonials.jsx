@@ -1,5 +1,6 @@
-import jane from "../images/Jane.webp"
-import will from "../images/William.jpg"
+import jane from "./Jane.webp"
+import will from "./William.jpg"
+
 
 export default function Testimonials() {
     return (

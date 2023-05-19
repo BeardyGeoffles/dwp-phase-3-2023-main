@@ -1,5 +1,5 @@
-import BuyerList from "../components/BuyerList";
-import BuyerForm from "../components/BuyerForm";
+import BuyerList from "../components/buyer/BuyerList";
+import BuyerForm from "../components/buyer/BuyerForm";
 
 export default function BuyerPage() {
     return (

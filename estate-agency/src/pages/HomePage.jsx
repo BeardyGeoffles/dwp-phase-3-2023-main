@@ -1,6 +1,6 @@
 import city from "../images/city.jpeg";
-import Footer from "../components/Footer";
-import Testimonials from "../components/testimonials";
+import Footer from "../components/homepage/Footer";
+import Testimonials from "../components/homepage/testimonials";
 
 export default function HomePage() {
 

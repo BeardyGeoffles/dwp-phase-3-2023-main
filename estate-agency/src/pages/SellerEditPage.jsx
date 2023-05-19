@@ -1,4 +1,4 @@
-import SellerEditForm from "../components/SellerEditForm";
+import SellerEditForm from "../components/seller/SellerEditForm";
 import styles from "../components/test.css";
 
 export default function SellerEditPage() {

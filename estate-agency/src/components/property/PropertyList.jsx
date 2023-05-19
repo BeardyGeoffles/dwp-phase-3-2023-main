@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import {TbBed, TbBath} from "react-icons/tb"
+import {TbBed, TbBath} from "react-icons/tb";
 import { Link } from 'react-router-dom';
-import styles from './test.css'
+import styles from "./property.css";
+
 
 export default function PropertyList() {
 

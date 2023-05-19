@@ -1,6 +1,7 @@
 import {BsTwitter,BsInstagram,BsFacebook,BsYoutube} from "react-icons/bs"
 import {BiCopyright, BiMailSend} from "react-icons/bi"
 import {AiOutlinePhone} from "react-icons/ai"
+import styles from "./home.css"
 
 
 export default function Footer() {
