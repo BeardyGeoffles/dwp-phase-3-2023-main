@@ -194,7 +194,7 @@ export default function PropertyList() {
         </div>
 
         <div>
-            <label htmlFor="searchMinBedroom">Minimum Bedrooms: </label>
+            <label htmlFor="searchMinBedroom">Min Bedrooms: </label>
             <select value = {searchMinBedroom} name="searchMinBedroom" id="searchMinBedroom"
             onChange={(e)=>setSearchMinBedroom(e.target.value)}>
             <option value="ANY">Any</option>
@@ -203,7 +203,7 @@ export default function PropertyList() {
             </select>
         </div>
         <div>
-            <label htmlFor="searchMinBathroom">Minimum Bathrooms: </label>
+            <label htmlFor="searchMinBathroom">Min Bathrooms: </label>
             <select value = {searchMinBathroom} name="searchMinBathroom" id="searchMinBathroom"
             onChange={(e)=>setSearchMinBathroom(e.target.value)}>
             <option value="ANY">Any</option>
