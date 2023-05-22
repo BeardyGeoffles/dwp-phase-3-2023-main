@@ -117,7 +117,7 @@
       "bathroom": 1,
       "garden": "BACK",
       "sellerId": 3,
-      "status": "SOLD",
+      "status": "FOR SALE",
       "id": 3
     },
     {
@@ -233,20 +233,20 @@
   "booking": [
     {
       "propertyId": 3,
-      "time": "2023-05-20T10:00:00.000Z",
-      "buyerId": 3,
+      "time": "2023-06-13T09:00:00.000Z",
+      "buyerId": 1,
       "id": 1
     },
     {
-      "propertyId": 3,
-      "time": "2023-05-20T11:00:00.000Z",
-      "buyerId": 1,
+      "propertyId": 4,
+      "time": "2023-06-12T13:00:00.000Z",
+      "buyerId": 3,
       "id": 2
     },
     {
-      "propertyId": 3,
-      "time": "2023-05-20T12:00:00.000Z",
-      "buyerId": 2,
+      "propertyId": 6,
+      "time": "2023-06-09T13:00:00.000Z",
+      "buyerId": 8,
       "id": 3
     }
   ]
