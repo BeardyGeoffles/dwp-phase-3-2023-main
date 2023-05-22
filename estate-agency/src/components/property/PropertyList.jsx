@@ -159,7 +159,7 @@ export default function PropertyList() {
         <form className="searchForm">
 
         <h2>Search Criteria</h2>
-        <div className="formContainerSearch">
+        <div className="formContainer">
 
         <div>
             <label htmlFor="searchType">Type: </label>
