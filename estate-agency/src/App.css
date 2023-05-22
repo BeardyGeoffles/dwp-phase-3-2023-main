@@ -58,10 +58,6 @@ button:hover{
   grid-gap: 10px;
 }
 
-
-
-
-
 .reviews {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -99,7 +95,6 @@ a {
   vertical-align: top;
   background-color: white;
 }
-
 
 a:hover {
   color: white;

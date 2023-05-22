@@ -91,7 +91,7 @@
       "bathroom": 1,
       "garden": "NONE",
       "sellerId": 1,
-      "status": "WITHDRAWN",
+      "status": "FOR SALE",
       "buyerId": 3,
       "id": 1
     },
@@ -170,6 +170,19 @@
       "status": "SOLD",
       "buyerId": "",
       "id": 7
+    },
+    {
+      "address": "1 For Sale",
+      "postcode": "RV12 4FG",
+      "type": "DETACHED",
+      "price": 500000,
+      "bedroom": 2,
+      "bathroom": 1,
+      "garden": "BACK",
+      "sellerId": 3,
+      "status": "FOR SALE",
+      "buyerId": 0,
+      "id": 8
     }
   ],
   "buyer": [

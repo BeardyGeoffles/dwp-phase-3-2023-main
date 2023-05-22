@@ -12,7 +12,7 @@ export default function PropertyForm(){
     const [bathroom, setBathroom] = useState('');
     const [garden, setGarden] = useState('');
     const [sellerId, setSellerId] = useState(0);
-    const [status, setStatus] = useState('');
+    const [status, setStatus] = useState('FOR SALE');
     const [buyerId, setBuyerId] = useState(0);
 
     const [buyers, setBuyers] = useState([]);
@@ -129,7 +129,7 @@ export default function PropertyForm(){
             </select>
             
             </div>
-            <div>
+            {/* <div>
             <label htmlFor="status">Status:</label>
             <select name="status" id="status" required value={status}
             onChange={(e) => setStatus(e.target.value)}>
@@ -138,19 +138,19 @@ export default function PropertyForm(){
                 <option value="SOLD">Sold</option>
                 <option value="WITHDRAWN">Withdrawn</option>
             </select><br></br>
-            </div>
-            <div>
-            <label htmlFor="buyer">Buyer:</label>
+            </div> */}
+            {/* <div>
+            <label htmlFor="buyer">Buyer:</label> */}
             {/* <input type="number" value={buyerId} name="buyerId" id="buyerId" 
             onChange={(e)=> setBuyerId(parseInt(e.target.value))}/><br></br> */}
-            <select name="buyer" id="buyer" value={buyerId}
+            {/* <select name="buyer" id="buyer" value={buyerId}
             onChange={(e)=> setBuyerId(parseInt(e.target.value))}>
                 <option value={0} selected disabled>Please Select</option>
             {buyers.map((item) => 
                 <option value={item.id}>{item.firstName} {item.surname}</option>)}
-            </select>
+            </select> */}
             
-            </div>
+            {/* </div> */}
 </div>
 
 
