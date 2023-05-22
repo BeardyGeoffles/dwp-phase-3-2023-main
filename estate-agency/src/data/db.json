@@ -92,7 +92,6 @@
       "garden": "NONE",
       "sellerId": 1,
       "status": "FOR SALE",
-      "buyerId": 3,
       "id": 1
     },
     {
@@ -105,8 +104,7 @@
       "bathroom": 1,
       "garden": "NONE",
       "sellerId": 1,
-      "status": "FOR SALE",
-      "buyerId": 3
+      "status": "FOR SALE"
     },
     {
       "address": "22 Welsh Street, Ebbw Vale",
@@ -142,7 +140,6 @@
       "garden": "BOTH",
       "sellerId": 4,
       "status": "WITHDRAWN",
-      "buyerId": "",
       "id": 5
     },
     {
@@ -155,7 +152,6 @@
       "garden": "BOTH",
       "sellerId": 1,
       "status": "FOR SALE",
-      "buyerId": 2,
       "id": 6
     },
     {
@@ -168,7 +164,6 @@
       "garden": "",
       "sellerId": 8,
       "status": "SOLD",
-      "buyerId": "",
       "id": 7
     },
     {
@@ -181,7 +176,6 @@
       "garden": "BACK",
       "sellerId": 3,
       "status": "FOR SALE",
-      "buyerId": 0,
       "id": 8
     }
   ],
