@@ -66,7 +66,7 @@ export default function BookingList() {
 
                 <h2>List of bookings ({bookings.length})</h2>
 
-                {bookings.map((item) => (
+                {bookings.sort((a,b) => (a.time < b.time ? -1 : 1)).map((item) => (
                     <div className="booking-display-short">
                         <div><BsCalendarDate/> {new Date(item.time).toLocaleDateString('en-GB')} - <BiTime /> {new Date(item.time).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</div>
                         <div><BsHouseDoor/> {getAddress(item.propertyId)}</div>
