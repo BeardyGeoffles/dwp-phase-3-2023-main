@@ -79,6 +79,7 @@ export default function PropertyForm(){
             <label htmlFor="type">Type:</label>
             <select name="type" id="type" required value={type}
             onChange={(e) => setType(e.target.value)}>
+                          <option value="" selected disabled>Please Select</option>
                 <option value="DETACHED">Detached</option>
                 <option value="APARTMENT">Apartment</option>
                 <option value="SEMI-DETACHED">Semi-detached</option>
@@ -107,10 +108,12 @@ export default function PropertyForm(){
             <label htmlFor="garden">Garden:</label>
             <select name="garden" id="garden" required value={garden}
             onChange={(e) => setGarden(e.target.value)}>
+                 <option value="" selected disabled>Please Select</option>
+                <option value="NONE">None</option>
                 <option value="FRONT">Front</option>
                 <option value="BACK">Back</option>
                 <option value="BOTH">Both</option>
-                <option value="NONE">None</option>
+ 
             </select><br></br>
             </div>
             
@@ -130,6 +133,7 @@ export default function PropertyForm(){
             <label htmlFor="status">Status:</label>
             <select name="status" id="status" required value={status}
             onChange={(e) => setStatus(e.target.value)}>
+                <option value="" selected disabled>Please Select</option>
                 <option value="FOR SALE">For Sale</option>
                 <option value="SOLD">Sold</option>
                 <option value="WITHDRAWN">Withdrawn</option>
