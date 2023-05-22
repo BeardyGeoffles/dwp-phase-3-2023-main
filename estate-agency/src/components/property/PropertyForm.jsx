@@ -50,7 +50,7 @@ export default function PropertyForm(){
         setBathroom('');
         setGarden('');
         setSellerId(0);
-        setStatus('');
+        setStatus('FOR SALE');
         setBuyerId(0);
 
         window.location.reload();
