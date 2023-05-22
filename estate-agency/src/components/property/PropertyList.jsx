@@ -11,6 +11,7 @@ export default function PropertyList() {
 
     const [searchType, setSearchType] = useState("ANY")
     const [searchStatus, setSearchStatus] = useState("ANY")
+    const [searchPrice, setSearchPrice] = useState("ANY")
 
     function getStatus(item) {
         switch(item.status) {
@@ -115,7 +116,17 @@ export default function PropertyList() {
 
     function applySearch(property){
         return (searchType === "ANY" || property.type === searchType) &&
-        (searchStatus === "ANY" || property.status === searchStatus)
+        (searchStatus === "ANY" || property.status === searchStatus) &&
+        (searchPrice === "ANY" || property.price <= parseInt(searchPrice))
+
+    }
+
+    function getPriceOptions(){
+        let options=[]
+        for (let i = 50000; i<= 2000000; i+= 10000 ){
+            options.push(<option value={i}>£{i.toLocaleString()}</option>)
+        }
+        return options
     }
 
 
@@ -127,7 +138,8 @@ export default function PropertyList() {
 
         <h2>Search Criteria</h2>
         <div className="formContainerSearch">
-            <div>
+
+        <div>
             <label htmlFor="searchType">Type: </label>
                 <select value = {searchType} name="searchType" id="searchType"
                 onChange={(e)=>setSearchType(e.target.value)}>
@@ -137,8 +149,8 @@ export default function PropertyList() {
                 <option value="SEMI-DETACHED">Semi-detached</option>
                 <option value="BUNGALOW">Bungalow</option>
             </select>
-</div>
-<div>
+        </div>
+        <div>
             <label htmlFor="searchStatus">Status: </label>
                 <select value = {searchStatus} name="searchStatus" id="searchStatus"
                 onChange={(e)=>setSearchStatus(e.target.value)}>
@@ -147,7 +159,18 @@ export default function PropertyList() {
                 <option value="SOLD">Sold</option>
                 <option value="WITHDRAWN">Withdrawn</option>
             </select>
-            </div>
+        </div>
+
+        <div>
+            <label htmlFor="searchPrice">Max Price: </label>
+                <select value = {searchPrice} name="searchPrice" id="searchPrice"
+                onChange={(e)=>setSearchPrice(e.target.value)}>
+                <option value="ANY">Any</option>
+                {getPriceOptions()}
+
+            </select>
+        </div>
+
         </div>
         </form>
 
