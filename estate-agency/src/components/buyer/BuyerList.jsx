@@ -32,7 +32,7 @@ export default function BuyerList() {
 
                 <h2>List of available buyers ({buyers.length})</h2>
 
-                {buyers.map((item) => (
+                {buyers.sort((a,b) => (a.surname < b.surname ? -1 : 1)).map((item) => (
                     <div className="buyer-display-short">
                         <div><AiOutlineIdcard /> {item.firstName} {item.surname}<br></br>
                         <h5><AiOutlineHome /> {item.address}<br></br>

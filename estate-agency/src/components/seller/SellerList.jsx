@@ -32,7 +32,7 @@ export default function SellerList() {
 
         <h2>List of available sellers ({sellers.length})</h2>  
 
-                {sellers.map((item) => (
+                {sellers.sort((a,b) => (a.surname < b.surname ? -1 : 1)).map((item) => (
                     <div className="seller-display-short">
                         <div><AiOutlineIdcard /> {item.firstName} {item.surname}<br></br>
                         <h5><AiOutlineHome /> {item.address}<br></br>
