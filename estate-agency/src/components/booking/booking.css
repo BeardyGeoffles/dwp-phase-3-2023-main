@@ -56,3 +56,8 @@
         vertical-align: top;
         background-color: white;
         }
+
+        .BookingEditPage {
+          background-color: rgb(220, 220, 220);
+          padding: 1rem;
+        }
