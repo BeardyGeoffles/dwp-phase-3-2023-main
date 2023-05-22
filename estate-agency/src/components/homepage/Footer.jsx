@@ -30,7 +30,7 @@ export default function Footer() {
        
         </div>
 </div>
-<h4><BiCopyright/> EAST Property Services Ltd 2023 <br>
+<h4><BiCopyright/> EAST Property Services Ltd 2023 - Radio GAGO - All Rights Reserved - IDST - Hands Off COBOL'D TOGETHER!!<br>
 </br>East Property Services are forward thinking estate agents operating nationwide. If you are looking for property to let, buy or sell then look no further.<br>
 </br><br></br><br></br><br>
 </br></h4>
