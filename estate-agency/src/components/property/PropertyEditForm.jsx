@@ -111,7 +111,7 @@ export default function PropertyEditForm(){
             <select name="seller" id="seller" required value={sellerId}
             onChange={(e)=> setSellerId(parseInt(e.target.value))}>
             <option value={0} selected disabled>Please Select</option>
-            {sellers.map((item) => 
+            {sellers.sort((a,b) => (a.surname < b.surname ? -1 : 1)).map((item) => 
                 <option value={item.id}>{item.firstName} {item.surname}</option>
             )}
             </select>
@@ -133,7 +133,7 @@ export default function PropertyEditForm(){
             <select name="buyer" id="buyer" value={buyerId}
             onChange={(e)=> setBuyerId(parseInt(e.target.value))}>
                 <option value={0} selected disabled>Please Select</option>
-            {buyers.map((item) => 
+            {buyers.sort((a,b) => (a.surname < b.surname ? -1 : 1)).map((item) => 
                 <option value={item.id}>{item.firstName} {item.surname}</option>)}
             </select>
             

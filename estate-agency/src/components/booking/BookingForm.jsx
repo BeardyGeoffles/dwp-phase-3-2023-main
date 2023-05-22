@@ -112,7 +112,7 @@ export default function BookingForm() {
             <select required value={buyerId} name="buyerId" id="buyerId"
             onChange={(e) => setBuyerId(parseInt(e.target.value))}>
                 <option value={0} selected disabled>Please select</option>
-                { buyers.map((item) => 
+                { buyers.sort((a,b) => (a.surname < b.surname ? -1 : 1)).map((item) => 
                 <option value={item.id}>{item.firstName} {item.surname}</option>
                 )}
             </select>
