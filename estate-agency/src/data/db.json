@@ -1,24 +1,36 @@
 {
   "seller": [
     {
-      "id": 1,
       "firstName": "John",
-      "surname": "Doe"
+      "surname": "Doe",
+      "address": "33 Camberwick Green",
+      "postcode": "CG1 1FG",
+      "phone": "01827263628",
+      "id": 1
     },
     {
-      "id": 2,
       "firstName": "Anna",
-      "surname": "Smith"
+      "surname": "Smith",
+      "address": "43 Rutlandville",
+      "postcode": "RV12 4FG",
+      "phone": "01738223746",
+      "id": 2
     },
     {
-      "id": 3,
       "firstName": "Peter",
-      "surname": "Jones"
+      "surname": "Jones",
+      "address": "1 Dragons Lane, Denton",
+      "postcode": "DL43 211",
+      "phone": "01227362926",
+      "id": 3
     },
     {
-      "id": 4,
       "firstName": "Karen",
-      "surname": "Slater"
+      "surname": "Slater",
+      "address": "82 Grants Court",
+      "postcode": "GC2 5FL",
+      "phone": "01722672983",
+      "id": 4
     },
     {
       "id": 5,
@@ -31,9 +43,9 @@
     {
       "firstName": "Andy",
       "surname": "Smith",
-      "address": "",
-      "postcode": "",
-      "phone": "",
+      "address": "Enterprise Court",
+      "postcode": "NC17 0ID",
+      "phone": "01823632926",
       "id": 7
     },
     {
