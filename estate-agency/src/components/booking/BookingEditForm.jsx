@@ -71,7 +71,7 @@ export default function BookingEditForm() {
             <h2>Edit booking</h2>
 
             <div className="formContainerBook">
-
+            <div>
             <label htmlFor="propertyId">Property:</label>
             <select required value={propertyId} name="propertyId" id="propertyId" 
             onChange={(e) => setPropertyId(parseInt(e.target.value))}>
@@ -79,13 +79,14 @@ export default function BookingEditForm() {
                 { properties.filter((item) => item.status === 'FOR SALE').map((item) => 
                 <option value={item.id}>{item.address}</option>
                 )}
-
             </select>
-
+            </div>
+            <div>
             <label htmlFor="bookingdate">Date:</label>
             <input required value={bookingDate} min={new Date().toISOString().split('T')[0]} type="date" name="bookingdate" id="bookingdate"
             onChange={(e) => setBookingDate(e.target.value)}/>
-
+            </div>
+            <div>
             <label htmlFor="bookingtime">Time: </label>
             <select required value={bookingTime} name="bookingtime" id="bookingtime"
             onChange={(e) => setBookingTime(e.target.value)}>
@@ -101,8 +102,8 @@ export default function BookingEditForm() {
                 <option value="17">5:00 pm</option>
 
             </select>
-
-
+            </div>
+            <div>
 
             <label htmlFor="buyerId">Buyer:</label>
             <select required value={buyerId} name="buyerId" id="buyerId"
@@ -113,7 +114,7 @@ export default function BookingEditForm() {
                 )}
 
             </select>
-
+            </div>
             <button>Save Changes</button>
             <button onClick={() => {navigate('/booking')}}>Cancel</button>
 
