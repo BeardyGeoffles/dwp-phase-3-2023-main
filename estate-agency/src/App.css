@@ -52,6 +52,12 @@ button:hover{
   grid-gap: 10px;
 }
 
+.formContainerSearch {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+
 
 
 

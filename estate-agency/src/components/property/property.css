@@ -59,6 +59,31 @@
       background-color: white;
       }
   
+      .property-list label {
+        border-radius: 5px;
+        padding: 5px;
+        margin-right: 20px;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 15pt;
+        width: 150px;
+        display: inline-block;
+        vertical-align: top;
+    }    
+      .property-list select {
+        border: 1px rgb(128, 128, 128) solid;
+        border-radius: 5px;
+        padding: 5px;
+        margin-right: 20px;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 15pt;
+        width: 212px;
+        display: inline-block;
+        vertical-align: top;
+        background-color: white;
+        }
+
       .container {
         display: grid;
         align-items: left; 
