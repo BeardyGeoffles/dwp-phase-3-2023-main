@@ -12,6 +12,7 @@ export default function PropertyList() {
     const [searchType, setSearchType] = useState("ANY")
     const [searchStatus, setSearchStatus] = useState("ANY")
     const [searchPrice, setSearchPrice] = useState("ANY")
+    const [searchGarden, setSearchGarden] = useState("ANY")
 
     function getStatus(item) {
         switch(item.status) {
@@ -117,7 +118,8 @@ export default function PropertyList() {
     function applySearch(property){
         return (searchType === "ANY" || property.type === searchType) &&
         (searchStatus === "ANY" || property.status === searchStatus) &&
-        (searchPrice === "ANY" || property.price <= parseInt(searchPrice))
+        (searchPrice === "ANY" || property.price <= parseInt(searchPrice)) &&
+        (searchGarden === 'ANY' || property.garden === searchGarden)
 
     }
 
@@ -169,6 +171,17 @@ export default function PropertyList() {
                 {getPriceOptions()}
 
             </select>
+        </div>
+
+        <div>
+            <label htmlFor="searchGarden">Garden: </label>
+            <select value = {searchGarden} name="searchGarden" id="searchGarden"
+            onChange={(e)=>setSearchGarden(e.target.value)}>
+                <option value="ANY">Any</option>
+                <option value="NONE">None</option>
+                <option value="FRONT">Front</option>
+                <option value="BACK">Back</option>
+                </select>
         </div>
 
         </div>
