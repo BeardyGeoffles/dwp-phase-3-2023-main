@@ -13,6 +13,9 @@ export default function PropertyList() {
     const [searchStatus, setSearchStatus] = useState("ANY")
     const [searchPrice, setSearchPrice] = useState("ANY")
     const [searchGarden, setSearchGarden] = useState("ANY")
+    const [searchMinBedroom, setSearchMinBedroom] = useState("ANY")
+    const [searchMinBathroom, setSearchMinBathroom] = useState("ANY")
+
 
     function getStatus(item) {
         switch(item.status) {
@@ -119,7 +122,9 @@ export default function PropertyList() {
         return (searchType === "ANY" || property.type === searchType) &&
         (searchStatus === "ANY" || property.status === searchStatus) &&
         (searchPrice === "ANY" || property.price <= parseInt(searchPrice)) &&
-        (searchGarden === 'ANY' || property.garden === searchGarden)
+        (searchGarden === 'ANY' || property.garden === searchGarden) &&
+        (searchMinBathroom === "ANY" || property.bathroom >= parseInt(searchMinBathroom)) &&
+        (searchMinBedroom === "ANY" || property.bedroom >= parseInt(searchMinBedroom))
 
     }
 
@@ -131,6 +136,21 @@ export default function PropertyList() {
         return options
     }
 
+    function getMinBedroomOptions(){
+        let options=[]
+        for (let i = 1; i<= 10; i+= 1 ){
+            options.push(<option value={i}>{i.toLocaleString()}</option>)
+        }
+        return options
+    }
+
+    function getMinBathroomOptions(){
+        let options=[]
+        for (let i = 1; i<= 10; i+= 1 ){
+            options.push(<option value={i}>{i.toLocaleString()}</option>)
+        }
+        return options
+    }
 
     return (
 
@@ -174,6 +194,24 @@ export default function PropertyList() {
         </div>
 
         <div>
+            <label htmlFor="searchMinBedroom">Minimum Bedrooms: </label>
+            <select value = {searchMinBedroom} name="searchMinBedroom" id="searchMinBedroom"
+            onChange={(e)=>setSearchMinBedroom(e.target.value)}>
+            <option value="ANY">Any</option>
+            {getMinBedroomOptions()}
+
+            </select>
+        </div>
+        <div>
+            <label htmlFor="searchMinBathroom">Minimum Bathrooms: </label>
+            <select value = {searchMinBathroom} name="searchMinBathroom" id="searchMinBathroom"
+            onChange={(e)=>setSearchMinBathroom(e.target.value)}>
+            <option value="ANY">Any</option>
+            {getMinBathroomOptions()}
+
+            </select>
+        </div>
+        <div>
             <label htmlFor="searchGarden">Garden: </label>
             <select value = {searchGarden} name="searchGarden" id="searchGarden"
             onChange={(e)=>setSearchGarden(e.target.value)}>
@@ -181,6 +219,7 @@ export default function PropertyList() {
                 <option value="NONE">None</option>
                 <option value="FRONT">Front</option>
                 <option value="BACK">Back</option>
+                <option value="BOTH">Both</option>
                 </select>
         </div>
 
