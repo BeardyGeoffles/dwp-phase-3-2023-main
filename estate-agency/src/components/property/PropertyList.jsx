@@ -22,7 +22,7 @@ export default function PropertyList() {
             case 'FOR SALE':
                 return <div className='status-for-sale'>FOR SALE - £{item.price.toLocaleString()}</div>
             case 'SOLD':
-                return <div className='status-sold'>SOLD</div>
+                return <div className='status-sold'>SOLD - £{item.price.toLocaleString()}</div>
             case 'WITHDRAWN':
                 return <div className='status-withdrawn'>WITHDRAWN</div>
             default:
