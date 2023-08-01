@@ -13,20 +13,20 @@ export default function BookingList() {
     const [bookingUpdated, setBookingUpdated] = useState([false]);
 
     useEffect(() => {
-        fetch("http://localhost:8080/booking")
+        fetch("http://localhost:8080/getAllBookings")
         .then((response) => response.json())
         .then((data) => setBookings(data))
         setBookingUpdated(false);
     }, [bookingUpdated])
 
     useEffect(() => {
-        fetch("http://localhost:8080/property")
+        fetch("http://localhost:8080/getAllProperties")
         .then((response) => response.json())
         .then((data) => setProperties(data))
     }, [])
 
     useEffect(() => {
-        fetch("http://localhost:8080/buyer")
+        fetch("http://localhost:8080/getAllBuyers")
         .then((response) => response.json())
         .then((data) => setBuyers(data))
     }, [])

@@ -18,7 +18,7 @@ export default function PropertyForm(){
     const [buyers, setBuyers] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:8080/buyer")
+        fetch("http://localhost:8080/getAllBuyers")
         .then((response) => response.json())
         .then((data) => setBuyers(data))
     }, [])
@@ -26,7 +26,7 @@ export default function PropertyForm(){
     const [sellers, setSellers] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:8080/seller")
+        fetch("http://localhost:8080/getAllSellers")
         .then((response) => response.json())
         .then((data) => setSellers(data))
     }, [])

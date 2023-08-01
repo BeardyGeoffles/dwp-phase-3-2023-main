@@ -9,7 +9,7 @@ export default function SellerList() {
     const [sellerUpdated, setSellerUpdated] = useState(false);
 
     useEffect(() => {
-        fetch("http://localhost:8080/seller")
+        fetch("http://localhost:8080/getAllSellers")
         .then((response) => response.json())
         .then((data) => setSellers(data))
         setSellerUpdated(false);

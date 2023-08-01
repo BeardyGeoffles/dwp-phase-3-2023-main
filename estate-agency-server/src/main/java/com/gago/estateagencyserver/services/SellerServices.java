@@ -15,13 +15,13 @@ public class SellerServices {
     SellerRepo repo;
 
     //CREATE
-    public void createseller(Seller seller)
+    public void createSeller(Seller seller)
     {
         repo.save(seller);
     }
 
     //READ
-    public Seller getseller(Long sellerID)
+    public Seller getSeller(Long sellerID)
     {
         Optional<Seller> seller =
                 repo.findById(sellerID);
@@ -29,7 +29,7 @@ public class SellerServices {
     }
 
     //READ ALL
-    public List<Seller> getAllsellers()
+    public List<Seller> getAllSellers()
     {
         return repo.findAll();
     }
@@ -37,7 +37,7 @@ public class SellerServices {
     //UPDATE (again called by the save?)..Glenn is 1000% sure of this
 
     //DELETE
-    public void deleteseller(Long sellerID)
+    public void deleteSeller(Long sellerID)
     {
         repo.deleteById(sellerID);
     }

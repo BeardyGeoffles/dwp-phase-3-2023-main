@@ -112,7 +112,7 @@ export default function PropertyList() {
     }
 
     useEffect(() => {
-        fetch("http://localhost:8080/property")
+        fetch("http://localhost:8080/getAllProperties")
         .then((response) => response.json())
         .then((data) => setProperties(data))
         setPropertyUpdated(false)
