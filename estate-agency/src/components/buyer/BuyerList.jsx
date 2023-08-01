@@ -9,7 +9,7 @@ export default function BuyerList() {
     const [buyerUpdated, setBuyerUpdated] = useState(false);
 
     useEffect(() => {
-        fetch("http://localhost:8080/buyer")
+        fetch("http://localhost:8080/getAllBuyers", {method: 'GET'})
         .then((response) => response.json())
         .then((data) => setBuyers(data))
         setBuyerUpdated(false);
