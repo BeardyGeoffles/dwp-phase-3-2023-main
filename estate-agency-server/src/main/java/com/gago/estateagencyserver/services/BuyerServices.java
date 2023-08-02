@@ -14,8 +14,8 @@ public class BuyerServices {
     @Autowired
     BuyerRepo repo;
 
-    //CREATE
-    public void createBuyer(Buyer buyer)
+    //CREATE & UPDATE
+    public void saveBuyer(Buyer buyer)
     {
         repo.save(buyer);
     }
@@ -34,12 +34,8 @@ public class BuyerServices {
         return repo.findAll();
     }
 
-    //UPDATE (again called by the save?)..Glenn is 1000% sure of this
 
     //DELETE
-    public void deleteBuyer(Long buyerID)
-    {
-        repo.deleteById(buyerID);
-    }
+    public void deleteBuyer(Buyer buyer) {repo.delete(buyer);}
 
 }

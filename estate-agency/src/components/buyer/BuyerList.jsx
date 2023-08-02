@@ -17,7 +17,7 @@ export default function BuyerList() {
 
     function buyerDelete(item){
         if(window.confirm(`Are you sure you want to delete: ${item.firstName} ${item.surname}?`) === true){
-         fetch("http://localhost:8080/buyer/" + item.id, {
+         fetch("http://localhost:8080/deleteBuyer", {
              method: 'DELETE',
              headers: { "Content-Type": "application/json"},
              body: JSON.stringify(item)

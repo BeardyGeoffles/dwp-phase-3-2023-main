@@ -18,7 +18,11 @@ public class BuyerController {
     public List<Buyer> getAllBuyers() { return buyerServices.getAllBuyers();}
 
     @PostMapping("/createBuyer")
-    public void createBuyer(@RequestBody Buyer buyer) { buyerServices.createBuyer(buyer);}
+    public void createBuyer(@RequestBody Buyer buyer) {buyerServices.saveBuyer(buyer);}
 
+    @PutMapping("/editBuyer")
+    public void editBuyer(@RequestBody Buyer buyer) {buyerServices.saveBuyer(buyer);}
 
+    @DeleteMapping("/deleteBuyer")
+    public void deleteBuyer(@RequestBody Buyer buyer){buyerServices.deleteBuyer(buyer);}
 }
