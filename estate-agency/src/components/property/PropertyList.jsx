@@ -82,8 +82,8 @@ export default function PropertyList() {
             method: 'PUT',
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(item)
-        })
-        setPropertyUpdated(true);
+        }).then(() => setPropertyUpdated(true))
+        ;
     }
 
 
@@ -93,8 +93,8 @@ export default function PropertyList() {
             method: 'PUT',
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(item)
-        })
-        setPropertyUpdated(true);
+        }).then(() => setPropertyUpdated(true))
+        ;
     }
 
     function setForSale(item){
@@ -103,8 +103,8 @@ export default function PropertyList() {
             method: 'PUT',
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(item)
-        })
-        setPropertyUpdated(true);
+        }).then(() => setPropertyUpdated(true))
+        ;
     }
 
     function propDelete(item){
@@ -113,8 +113,8 @@ export default function PropertyList() {
             method: 'DELETE',
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(item)
-        })
-        setPropertyUpdated(true); 
+        }).then(() => setPropertyUpdated(true))
+
        }
     }
 
