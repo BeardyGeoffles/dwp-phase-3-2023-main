@@ -16,7 +16,7 @@ export default function BookingList() {
         fetch("http://localhost:8080/getAllBookings")
         .then((response) => response.json())
         .then((data) => setBookings(data))
-            .then(() =>setBookingUpdated(false))
+            .then(() => setBookingUpdated(false));
     }, [bookingUpdated])
 
     useEffect(() => {
