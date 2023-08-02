@@ -21,10 +21,10 @@ public class PropertyServices {
     }
 
     //READ
-    public Property getProperty(Long propertyID)
+    public Property getProperty(Long propertyId)
     {
         Optional<Property> property =
-        repo.findById(propertyID);
+        repo.findById(propertyId);
         return property.orElse(null);
     }
 

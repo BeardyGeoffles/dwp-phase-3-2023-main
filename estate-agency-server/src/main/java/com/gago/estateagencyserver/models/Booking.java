@@ -10,32 +10,32 @@ public class Booking {
     @GeneratedValue
     private Long id;
 
-    private Long propertyID, buyerID;
+    private Long propertyId, buyerId;
 
     private String time;
 
     public Booking(){};
 
-    public Booking(Long propertyID, Long buyerID, String time) {
-        this.propertyID = propertyID;
-        this.buyerID = buyerID;
+    public Booking(Long propertyId, Long buyerId, String time) {
+        this.propertyId = propertyId;
+        this.buyerId = buyerId;
         this.time = time;
     }
 
-    public Long getPropertyID() {
-        return propertyID;
+    public Long getPropertyId() {
+        return propertyId;
     }
 
-    public void setPropertyID(Long propertyID) {
-        this.propertyID = propertyID;
+    public void setPropertyId(Long propertyId) {
+        this.propertyId = propertyId;
     }
 
-    public Long getBuyerID() {
-        return buyerID;
+    public Long getBuyerId() {
+        return buyerId;
     }
 
-    public void setBuyerID(Long buyerID) {
-        this.buyerID = buyerID;
+    public void setBuyerId(Long buyerId) {
+        this.buyerId = buyerId;
     }
 
     public String getTime() {

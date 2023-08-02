@@ -21,10 +21,10 @@ public class BookingServices {
 
 
     //READ
-    public Booking getBooking(Long bookingID)
+    public Booking getBooking(Long bookingId)
     {
         Optional<Booking> booking =
-        repo.findById(bookingID);
+        repo.findById(bookingId);
 
         return booking.orElse(null);
     }

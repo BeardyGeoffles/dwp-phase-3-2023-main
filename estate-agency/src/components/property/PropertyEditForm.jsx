@@ -92,9 +92,7 @@ export default function PropertyEditForm(){
             <input type="number" min="0" required value={bathroom} name="bathroom" id="bathroom" 
             onChange={(e)=> setBathroom(parseInt(e.target.value))}/>   <br></br>
             </div>
-            {/* <label htmlFor="garden">Garden:</label>
-            <input type="checkbox" required value={garden} name="garden" id="garden" 
-            onChange={(e)=> setGarden(e.target.checked ? 1 : 0)}/><br></br> */}
+
             <div>
             <label htmlFor="garden">Garden:</label>
             <select name="garden" id="garden" required value={garden}
@@ -129,8 +127,6 @@ export default function PropertyEditForm(){
             </div>
             <div>
             <label htmlFor="buyer">Buyer:</label>
-            {/* <input type="number" value={buyerId} name="buyerId" id="buyerId" 
-            onChange={(e)=> setBuyerId(parseInt(e.target.value))}/><br></br> */}
             <select name="buyer" id="buyer" value={buyerId}
             onChange={(e)=> setBuyerId(parseInt(e.target.value))}>
                 <option value={0} selected disabled>Please Select</option>

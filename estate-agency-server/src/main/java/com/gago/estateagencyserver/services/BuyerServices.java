@@ -21,10 +21,10 @@ public class BuyerServices {
     }
 
     //READ
-    public Buyer getBuyer(Long buyerID)
+    public Buyer getBuyer(Long buyerId)
     {
         Optional<Buyer> buyer =
-                repo.findById(buyerID);
+                repo.findById(buyerId);
         return buyer.orElse(null);
     }
 
