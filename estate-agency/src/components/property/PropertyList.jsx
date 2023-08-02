@@ -72,7 +72,7 @@ export default function PropertyList() {
 
     function withdraw(item){
         item.status = "WITHDRAWN"
-        fetch("http://localhost:8080/property/" + item.id, {
+        fetch("http://localhost:8080/editProperty", {
             method: 'PUT',
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(item)
@@ -82,7 +82,7 @@ export default function PropertyList() {
 
     function setSold(item){
         item.status = "SOLD"
-        fetch("http://localhost:8080/property/" + item.id, {
+        fetch("http://localhost:8080/editProperty", {
             method: 'PUT',
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(item)
@@ -92,7 +92,7 @@ export default function PropertyList() {
 
     function setForSale(item){
         item.status = "FOR SALE"
-        fetch("http://localhost:8080/property/" + item.id, {
+        fetch("http://localhost:8080/editProperty", {
             method: 'PUT',
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(item)
@@ -102,7 +102,7 @@ export default function PropertyList() {
 
     function propDelete(item){
        if(window.confirm(`Are you sure you want to delete: ${item.address}?`) === true){
-        fetch("http://localhost:8080/property/" + item.id, {
+        fetch("http://localhost:8080/deleteProperty", {
             method: 'DELETE',
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(item)

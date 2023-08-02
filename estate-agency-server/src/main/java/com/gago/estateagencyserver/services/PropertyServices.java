@@ -14,8 +14,8 @@ public class PropertyServices {
     @Autowired
     PropertyRepo repo;
 
-    //CREATE
-    public void createProperty(Property property)
+    //CREATE & UPDATE
+    public void saveProperty(Property property)
     {
         repo.save(property);
     }
@@ -34,11 +34,9 @@ public class PropertyServices {
         return repo.findAll();
     }
 
-    //UPDATE, CALLS THE SAVE METHOD ABOVE
-
     //DELETE
-    public void deleteProperty(Long propertyID)
+    public void deleteProperty(Property property)
     {
-        repo.deleteById(propertyID);
+        repo.delete(property);
     }
 }

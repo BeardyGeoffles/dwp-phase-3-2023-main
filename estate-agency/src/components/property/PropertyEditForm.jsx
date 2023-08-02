@@ -18,11 +18,12 @@ export default function PropertyEditForm(){
     const [sellerId, setSellerId] = useState(property.sellerId);
     const [status, setStatus] = useState(property.status);
     const [buyerId, setBuyerId] = useState(property.buyerId);
+    const [id, setId] = useState(property.id);
 
     const [buyers, setBuyers] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:8080/buyer")
+        fetch("http://localhost:8080/getAllBuyers")
         .then((response) => response.json())
         .then((data) => setBuyers(data))
     }, [])
@@ -30,7 +31,7 @@ export default function PropertyEditForm(){
     const [sellers, setSellers] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:8080/seller")
+        fetch("http://localhost:8080/getAllSellers")
         .then((response) => response.json())
         .then((data) => setSellers(data))
     }, [])
@@ -38,9 +39,9 @@ export default function PropertyEditForm(){
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        const amendedproperty = {address, postcode, type, price, bedroom, bathroom, garden, sellerId, status, buyerId};
+        const amendedproperty = {id, address, postcode, type, price, bedroom, bathroom, garden, sellerId, status, buyerId};
 
-        fetch('http://localhost:8080/property/' + property.id, {
+        fetch("http://localhost:8080/editProperty", {
             method: 'PUT',
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(amendedproperty)

@@ -36,7 +36,7 @@ export default function PropertyForm(){
 
         const property = {address, postcode, type, price, bedroom, bathroom, garden, sellerId, status, buyerId};
 
-        fetch('http://localhost:8080/property', {
+        fetch('http://localhost:8080/createProperty', {
             method: 'POST',
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(property)
@@ -129,28 +129,7 @@ export default function PropertyForm(){
             </select>
             
             </div>
-            {/* <div>
-            <label htmlFor="status">Status:</label>
-            <select name="status" id="status" required value={status}
-            onChange={(e) => setStatus(e.target.value)}>
-                <option value="" selected disabled>Please Select</option>
-                <option value="FOR SALE">For Sale</option>
-                <option value="SOLD">Sold</option>
-                <option value="WITHDRAWN">Withdrawn</option>
-            </select><br></br>
-            </div> */}
-            {/* <div>
-            <label htmlFor="buyer">Buyer:</label> */}
-            {/* <input type="number" value={buyerId} name="buyerId" id="buyerId" 
-            onChange={(e)=> setBuyerId(parseInt(e.target.value))}/><br></br> */}
-            {/* <select name="buyer" id="buyer" value={buyerId}
-            onChange={(e)=> setBuyerId(parseInt(e.target.value))}>
-                <option value={0} selected disabled>Please Select</option>
-            {buyers.map((item) => 
-                <option value={item.id}>{item.firstName} {item.surname}</option>)}
-            </select> */}
-            
-            {/* </div> */}
+
 </div>
 
 
