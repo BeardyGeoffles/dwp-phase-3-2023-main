@@ -36,6 +36,7 @@ export default function PropertyEditForm(){
         .then((data) => setSellers(data))
     }, [])
 
+
     const handleSubmit = (event) => {
         event.preventDefault();
 

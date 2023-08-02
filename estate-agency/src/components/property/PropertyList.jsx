@@ -2,12 +2,13 @@ import { useEffect, useState } from 'react';
 import {TbBed, TbBath} from "react-icons/tb";
 import { Link } from 'react-router-dom';
 import styles from "./property.css";
+import {Navigate, useNavigate} from "react-router";
 
 
 export default function PropertyList() {
 
     const [properties, setProperties] = useState([]);
-    const [propertyUpdated, setPropertyUpdated] = useState(false);
+    const [propertyUpdated, setPropertyUpdated] = useState(true);
 
     const [searchType, setSearchType] = useState("ANY")
     const [searchStatus, setSearchStatus] = useState("ANY")
@@ -38,6 +39,7 @@ export default function PropertyList() {
                 <button className='property-button' onClick={() => setSold(item)}>Set Sold</button>  
                 <button className='property-button' onClick={() => withdraw(item)}>Withdraw</button>
                 <Link to={`/property/${item.id}/edit`} state={item} className='edit-button'>Edit</Link>
+
                 <button className='delete-button' onClick={() => propDelete(item)}>Delete</button>
                 </div>
                 )
@@ -46,6 +48,7 @@ export default function PropertyList() {
                 <div className='property-buttons'>
                 <button className='property-button' onClick={() => setForSale(item)}>Set For Sale</button>  
                 <Link to={`/property/${item.id}/edit`} state={item} className='edit-button'>Edit</Link>
+
                 <button className='delete-button' onClick={() => propDelete(item)}>Delete</button>
                 </div>
                 )
@@ -54,14 +57,17 @@ export default function PropertyList() {
                 <div className='property-buttons'>
                 <button className='property-button' onClick={() => setForSale(item)}>Set For Sale</button>  
                 <Link to={`/property/${item.id}/edit`} state={item} className='edit-button'>Edit</Link>
-                <button className='delete-button' onClick={() => propDelete(item)}>Delete</button>
+
+                    <button className='delete-button' onClick={() => propDelete(item)}>Delete</button>
                 </div>
                 )
             default:
                 return (
                     <div className='property-buttons'>
-                    <button className='property-button' onClick={() => setForSale(item)}>Set For Sale</button>  
+                    <button className='property-button' onClick={() => setForSale(item)}>Set For Sale</button>
+
                     <Link to={`/property/${item.id}/edit`} state={item} className='edit-button'>Edit</Link>
+
                     <button className='delete-button' onClick={() => propDelete(item)}>Delete</button>
                     </div>
                     )
@@ -79,6 +85,7 @@ export default function PropertyList() {
         })
         setPropertyUpdated(true);
     }
+
 
     function setSold(item){
         item.status = "SOLD"
@@ -117,6 +124,7 @@ export default function PropertyList() {
         .then((data) => setProperties(data))
         setPropertyUpdated(false)
     }, [propertyUpdated])
+
 
     function applySearch(property){
         return (searchType === "ANY" || property.type === searchType) &&
