@@ -122,7 +122,7 @@ export default function PropertyList() {
         fetch("http://localhost:8080/getAllProperties")
         .then((response) => response.json())
         .then((data) => setProperties(data))
-        setPropertyUpdated(false)
+            .then(() => setPropertyUpdated(false))
     }, [propertyUpdated])
 
 

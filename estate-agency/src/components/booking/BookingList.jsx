@@ -10,13 +10,13 @@ export default function BookingList() {
     const [properties, setProperties] = useState([]);
     const [buyers, setBuyers] = useState([]);
 
-    const [bookingUpdated, setBookingUpdated] = useState([false]);
+    const [bookingUpdated, setBookingUpdated] = useState(true);
 
     useEffect(() => {
         fetch("http://localhost:8080/getAllBookings")
         .then((response) => response.json())
         .then((data) => setBookings(data))
-        setBookingUpdated(false);
+            .then(() =>setBookingUpdated(false))
     }, [bookingUpdated])
 
     useEffect(() => {
@@ -55,8 +55,7 @@ export default function BookingList() {
                 method: 'DELETE',
                 headers: { "Content-Type": "application/json"},
                 body: JSON.stringify(item)
-            })
-            setBookingUpdated(true); 
+            }).then(() => setBookingUpdated(true));
            }
     }
 

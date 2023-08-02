@@ -7,7 +7,7 @@ export default function BookingForm() {
 
     const [propertyId, setPropertyId] = useState(0);
     const [bookingDate, setBookingDate] = useState('');
-    const [bookingTime, setBookingTime] = useState('');
+    const [bookingTime, setBookingTime] = useState(8);
     const [buyerId, setBuyerId] = useState(0);
 
 
@@ -94,7 +94,7 @@ export default function BookingForm() {
             <label htmlFor="bookingtime">Time: </label>
             <select required value={bookingTime} name="bookingtime" id="bookingtime"
             onChange={(e) => setBookingTime(e.target.value)}>
-                <option value="8">8:00 am</option>
+                <option value="8" selected >8:00 am</option>
                 <option value="9">9:00 am</option>
                 <option value="10">10:00 am</option>
                 <option value="11">11:00 am</option>
