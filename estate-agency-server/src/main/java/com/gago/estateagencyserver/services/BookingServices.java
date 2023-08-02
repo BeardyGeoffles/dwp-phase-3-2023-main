@@ -13,13 +13,15 @@ public class BookingServices {
     @Autowired
     BookingRepo repo;
 
-
-    public void saveRecord(Booking booking) //CREATE ??QUESTION, DOES THIS ALSO GET CALLED WHEN USING UPDATE
+//CREATE & UPDATE
+    public void saveBooking(Booking booking)
     {
         repo.save(booking);
     }
 
-    public Booking getBooking(Long bookingID) //READ ONE
+
+    //READ
+    public Booking getBooking(Long bookingID)
     {
         Optional<Booking> booking =
         repo.findById(bookingID);
@@ -27,16 +29,16 @@ public class BookingServices {
         return booking.orElse(null);
     }
 
-    public List<Booking> getAllBookings() //READ ALL
+    //READ ALL
+    public List<Booking> getAllBookings()
     {
         return repo.findAll();
     }
 
-    //UPDATE?
-
-    public void deleteBooking(Long bookingID) //DELETE
+    //DELETE
+    public void deleteBooking(Booking booking)
     {
-        repo.deleteById(bookingID);
+        repo.delete(booking);
     } //improve this to return the deleted object back.
 
 

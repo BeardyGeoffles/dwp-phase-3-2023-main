@@ -17,6 +17,7 @@ export default function BookingEditForm() {
     const [properties, setProperties] = useState([]);
     const [buyers, setBuyers] = useState([]);
     const [bookings, setBookings] = useState([]);
+    const [id, setId] = useState(booking.id);
 
     
     const handleSubmit = (event) => {
@@ -32,12 +33,12 @@ export default function BookingEditForm() {
         }
 
 
-        const newbooking = {propertyId, time, buyerId};
+        const amendBooking = {id, propertyId, time, buyerId};
 
-        fetch('http://localhost:8080/booking/' + booking.id, {
+        fetch('http://localhost:8080/editBooking' , {
             method: 'PUT',
             headers: { "Content-Type": "application/json"},
-            body: JSON.stringify(newbooking)
+            body: JSON.stringify(amendBooking)
         }).then(navigate('/booking'))
 
 
@@ -45,21 +46,21 @@ export default function BookingEditForm() {
     
 
     useEffect(() => {
-        fetch("http://localhost:8080/property")
+        fetch("http://localhost:8080/getAllProperties")
         .then((response) => response.json())
         .then((data) => setProperties(data))        
     
     }, [])
 
     useEffect(()=> {
-        fetch("http://localhost:8080/buyer")
+        fetch("http://localhost:8080/getAllBuyers")
         .then((response) => response.json())
         .then((data) => setBuyers(data))  
 
     }, [] )
 
     useEffect(()=> {
-        fetch("http://localhost:8080/booking")
+        fetch("http://localhost:8080/getAllBookings")
         .then((response) => response.json())
         .then((data) => setBookings(data))  
 

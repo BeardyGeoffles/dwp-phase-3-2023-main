@@ -51,7 +51,7 @@ export default function BookingList() {
     function bookingDelete(item)
     {
         if(window.confirm(`Are you sure you want to delete booking on: ${new Date(item.time).toLocaleString('en-GB')}?`) === true){
-            fetch("http://localhost:8080/booking/" + item.id, {
+            fetch("http://localhost:8080/deleteBooking", {
                 method: 'DELETE',
                 headers: { "Content-Type": "application/json"},
                 body: JSON.stringify(item)
