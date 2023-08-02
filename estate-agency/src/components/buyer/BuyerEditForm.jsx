@@ -1,6 +1,7 @@
 import { useState} from "react";
 import { useLocation, Navigate, useNavigate } from "react-router";
 
+
 export default function BuyerEditForm(){
     
     const buyer = useLocation().state;
