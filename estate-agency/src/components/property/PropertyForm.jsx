@@ -40,6 +40,7 @@ export default function PropertyForm(){
             method: 'POST',
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(property)
+
         })
 
         setAddress('');

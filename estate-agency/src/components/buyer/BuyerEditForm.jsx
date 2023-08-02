@@ -17,9 +17,9 @@ export default function BuyerEditForm(){
 
         event.preventDefault();
 
-        const amendedbuyer =  {id, firstName, surname, address, postcode, phone};
+        const amendedbuyer = {id, firstName, surname, address, postcode, phone};
 
-        fetch('http://localhost:8080/editBuyer',{
+        fetch('http://localhost:8080/editBuyer' , {
             method: 'PUT',
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(amendedbuyer)

@@ -1,8 +1,6 @@
 package com.gago.estateagencyserver.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Property {
@@ -13,11 +11,11 @@ public class Property {
     private String address, postcode, type, garden, status;
     private int price, bedroom, bathroom;
 
-    private Long sellerID;
+    private Long sellerId, buyerId;
 
     public Property (){};
 
-    public Property(String address, String postcode, String type, String garden, String status, int price, int bedroom, int bathroom, Long sellerID) {
+    public Property(String address, String postcode, String type, String garden, String status, int price, int bedroom, int bathroom, Long sellerId, Long buyerId) {
         this.address = address;
         this.postcode = postcode;
         this.type = type;
@@ -26,7 +24,8 @@ public class Property {
         this.price = price;
         this.bedroom = bedroom;
         this.bathroom = bathroom;
-        this.sellerID = sellerID;
+        this.sellerId = sellerId;
+        this.buyerId = buyerId;
     }
 
     public String getAddress() {
@@ -93,12 +92,12 @@ public class Property {
         this.bathroom = bathroom;
     }
 
-    public Long getSellerID() {
-        return sellerID;
+    public Long getSellerId() {
+        return sellerId;
     }
 
-    public void setSellerID(Long sellerID) {
-        this.sellerID = sellerID;
+    public void setSellerId(Long sellerId) {
+        this.sellerId = sellerId;
     }
 
     public void setId(Long id) {
@@ -109,5 +108,11 @@ public class Property {
         return id;
     }
 
+    public Long getBuyerId() {
+        return buyerId;
+    }
 
+    public void setBuyerId(Long buyerId) {
+        this.buyerId = buyerId;
+    }
 }
