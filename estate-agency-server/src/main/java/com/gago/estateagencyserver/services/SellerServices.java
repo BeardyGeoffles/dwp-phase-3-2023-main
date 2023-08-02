@@ -14,8 +14,8 @@ public class SellerServices {
     @Autowired
     SellerRepo repo;
 
-    //CREATE
-    public void createSeller(Seller seller)
+    //CREATE & Update
+    public void saveSeller(Seller seller)
     {
         repo.save(seller);
     }
@@ -37,9 +37,9 @@ public class SellerServices {
     //UPDATE (again called by the save?)..Glenn is 1000% sure of this
 
     //DELETE
-    public void deleteSeller(Long sellerID)
+    public void deleteSeller(Seller seller)
     {
-        repo.deleteById(sellerID);
+        repo.delete(seller);
     }
 
 }

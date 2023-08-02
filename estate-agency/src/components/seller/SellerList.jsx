@@ -17,7 +17,7 @@ export default function SellerList() {
 
     function sellerDelete(item){
         if(window.confirm(`Are you sure you want to delete: ${item.firstName} ${item.surname}?`) === true){
-         fetch("http://localhost:8080/seller/" + item.id, {
+         fetch("http://localhost:8080/deleteSeller", {
              method: 'DELETE',
              headers: { "Content-Type": "application/json"},
              body: JSON.stringify(item)

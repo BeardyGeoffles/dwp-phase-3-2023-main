@@ -15,7 +15,7 @@ export default function SellerForm(){
 
         const seller = {firstName, surname, address, postcode, phone};
 
-        fetch('http://localhost:8080/seller', {
+        fetch('http://localhost:8080/createSeller', {
             method: 'POST',
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(seller)

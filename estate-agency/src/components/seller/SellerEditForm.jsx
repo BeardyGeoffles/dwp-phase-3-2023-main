@@ -11,14 +11,15 @@ export default function SellerEditForm(){
     const [address, setAddress] = useState(seller.address);
     const [postcode, setPostcode] = useState(seller.postcode);
     const [phone, setPhone] = useState(seller.phone);
+    const [id, setID] = useState(seller.id);
 
     const handleSubmit = (event) => {
 
         event.preventDefault();
 
-        const amendedseller = {firstName, surname, address, postcode, phone};
+        const amendedseller = {id, firstName, surname, address, postcode, phone};
 
-        fetch('http://localhost:8080/seller/' + seller.id, {
+        fetch('http://localhost:8080/editSeller', {
             method: 'PUT',
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(amendedseller)
