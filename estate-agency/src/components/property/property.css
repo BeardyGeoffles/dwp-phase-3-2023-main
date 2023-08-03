@@ -84,6 +84,17 @@
         background-color: white;
         }
 
+      .property-list .searchFormVisible{
+
+          background-color: red;
+      }
+
+      .property-list .searchFormInvisible {
+          background-color: blue;
+
+
+      }
+
       .container {
         display: grid;
         align-items: left; 

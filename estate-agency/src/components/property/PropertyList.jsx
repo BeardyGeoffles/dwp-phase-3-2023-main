@@ -173,9 +173,7 @@ export default function PropertyList() {
 
         <button onClick={toggleSearchVisible}>Search</button>
 
-            {searchVisible &&
-
-        <form className="searchForm">
+        <form className={searchVisible ? "searchFormVisible" : "searchFormInvisible"}>
 
         <h2>Search Criteria</h2>
         <div className="formContainer">
@@ -244,7 +242,6 @@ export default function PropertyList() {
 
         </div>
         </form>
-            }
 
         <h2>List of available properties ({properties.filter(applySearch).length}/{properties.length})</h2>
 
