@@ -10,6 +10,8 @@ export default function PropertyList() {
     const [properties, setProperties] = useState([]);
     const [propertyUpdated, setPropertyUpdated] = useState(true);
 
+    const [searchVisible, setSearchVisible] = useState(false);
+
     const [searchType, setSearchType] = useState("ANY")
     const [searchStatus, setSearchStatus] = useState("ANY")
     const [searchPrice, setSearchPrice] = useState("ANY")
@@ -160,9 +162,18 @@ export default function PropertyList() {
         return options
     }
 
+    function toggleSearchVisible() {
+        setSearchVisible(!searchVisible);
+    }
+
+
     return (
 
         <div className="property-list">
+
+        <button onClick={toggleSearchVisible}>Search</button>
+
+            {searchVisible &&
 
         <form className="searchForm">
 
@@ -233,6 +244,7 @@ export default function PropertyList() {
 
         </div>
         </form>
+            }
 
         <h2>List of available properties ({properties.filter(applySearch).length}/{properties.length})</h2>
 
