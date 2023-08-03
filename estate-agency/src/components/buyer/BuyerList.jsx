@@ -6,13 +6,13 @@ import styles from "./buyer.css";
 export default function BuyerList() {
 
     const [buyers, setBuyers] = useState([]);
-    const [buyerUpdated, setBuyerUpdated] = useState(false);
+    const [buyerUpdated, setBuyerUpdated] = useState(true);
 
     useEffect(() => {
         fetch("http://localhost:8080/getAllBuyers", {method: 'GET'})
-        .then((response) => response.json())
-        .then((data) => setBuyers(data))
-        setBuyerUpdated(false);
+            .then((response) => response.json())
+            .then((data) => setBuyers(data))
+            .then(() => setBuyerUpdated(false));
     }, [buyerUpdated])
 
     function buyerDelete(item){
@@ -20,9 +20,8 @@ export default function BuyerList() {
          fetch("http://localhost:8080/deleteBuyer", {
              method: 'DELETE',
              headers: { "Content-Type": "application/json"},
-             body: JSON.stringify(item)
-         })
-         setBuyerUpdated(true); 
+             body: JSON.stringify(item)})
+             .then(()=> setBuyerUpdated(true));
         }
      }
 
@@ -43,8 +42,6 @@ export default function BuyerList() {
                         </div>
                     </div>
                 ))}
-
-
         </div>
 
     )

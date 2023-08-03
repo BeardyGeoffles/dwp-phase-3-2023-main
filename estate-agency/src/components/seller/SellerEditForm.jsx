@@ -24,9 +24,6 @@ export default function SellerEditForm(){
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(amendedseller)
         }).then(navigate('/seller'))
-
-        
-
     }
     
     return (

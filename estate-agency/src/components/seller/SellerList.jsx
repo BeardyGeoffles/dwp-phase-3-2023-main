@@ -6,13 +6,13 @@ import styles from "./seller.css"
 export default function SellerList() {
 
     const [sellers, setSellers] = useState([]);
-    const [sellerUpdated, setSellerUpdated] = useState(false);
+    const [sellerUpdated, setSellerUpdated] = useState(true);
 
     useEffect(() => {
         fetch("http://localhost:8080/getAllSellers")
-        .then((response) => response.json())
-        .then((data) => setSellers(data))
-        setSellerUpdated(false);
+            .then((response) => response.json())
+            .then((data) => setSellers(data))
+            .then(()=> setSellerUpdated(false));
     }, [sellerUpdated])
 
     function sellerDelete(item){
@@ -20,9 +20,8 @@ export default function SellerList() {
          fetch("http://localhost:8080/deleteSeller", {
              method: 'DELETE',
              headers: { "Content-Type": "application/json"},
-             body: JSON.stringify(item)
-         })
-         setSellerUpdated(true); 
+             body: JSON.stringify(item)})
+             .then(()=> setSellerUpdated(true));
         }
      }
 
