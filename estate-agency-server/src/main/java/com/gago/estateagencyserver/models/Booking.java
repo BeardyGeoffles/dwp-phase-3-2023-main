@@ -14,7 +14,8 @@ public class Booking {
 
     private String time;
 
-    public Booking(){};
+    public Booking() {
+    }
 
     public Booking(Long propertyId, Long buyerId, String time) {
         this.propertyId = propertyId;
@@ -46,11 +47,11 @@ public class Booking {
         this.time = time;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

@@ -13,34 +13,28 @@ public class BookingServices {
     @Autowired
     BookingRepo repo;
 
-//CREATE & UPDATE
-    public void saveBooking(Booking booking)
-    {
+    //CREATE & UPDATE
+    public void saveBooking(Booking booking) {
         repo.save(booking);
     }
 
-
     //READ
-    public Booking getBooking(Long bookingId)
-    {
+    public Booking getBooking(Long bookingId) {
         Optional<Booking> booking =
-        repo.findById(bookingId);
+                repo.findById(bookingId);
 
         return booking.orElse(null);
     }
 
     //READ ALL
-    public List<Booking> getAllBookings()
-    {
+    public List<Booking> getAllBookings() {
         return repo.findAll();
     }
 
     //DELETE
-    public void deleteBooking(Booking booking)
-    {
+    public void deleteBooking(Booking booking) {
         repo.delete(booking);
     } //improve this to return the deleted object back.
-
 
 
 }

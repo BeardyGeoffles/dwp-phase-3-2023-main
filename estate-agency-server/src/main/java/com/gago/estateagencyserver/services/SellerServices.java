@@ -14,31 +14,25 @@ public class SellerServices {
     @Autowired
     SellerRepo repo;
 
-    //CREATE & Update
-    public void saveSeller(Seller seller)
-    {
+    //CREATE & UPDATE
+    public void saveSeller(Seller seller) {
         repo.save(seller);
     }
 
     //READ
-    public Seller getSeller(Long sellerId)
-    {
+    public Seller getSeller(Long sellerId) {
         Optional<Seller> seller =
                 repo.findById(sellerId);
         return seller.orElse(null);
     }
 
     //READ ALL
-    public List<Seller> getAllSellers()
-    {
+    public List<Seller> getAllSellers() {
         return repo.findAll();
     }
 
-    //UPDATE (again called by the save?)..Glenn is 1000% sure of this
-
     //DELETE
-    public void deleteSeller(Seller seller)
-    {
+    public void deleteSeller(Seller seller) {
         repo.delete(seller);
     }
 

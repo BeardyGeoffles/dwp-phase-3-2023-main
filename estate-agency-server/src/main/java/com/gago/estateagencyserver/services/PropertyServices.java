@@ -15,28 +15,24 @@ public class PropertyServices {
     PropertyRepo repo;
 
     //CREATE & UPDATE
-    public void saveProperty(Property property)
-    {
+    public void saveProperty(Property property) {
         repo.save(property);
     }
 
     //READ
-    public Property getProperty(Long propertyId)
-    {
+    public Property getProperty(Long propertyId) {
         Optional<Property> property =
-        repo.findById(propertyId);
+                repo.findById(propertyId);
         return property.orElse(null);
     }
 
     //READ ALL
-    public List<Property> getAllProperties()
-    {
+    public List<Property> getAllProperties() {
         return repo.findAll();
     }
 
     //DELETE
-    public void deleteProperty(Property property)
-    {
+    public void deleteProperty(Property property) {
         repo.delete(property);
     }
 }

@@ -12,7 +12,8 @@ public class Buyer {
 
     private String firstName, surname, address, postcode, phone;
 
-    public Buyer(){};
+    public Buyer() {
+    }
 
     public Buyer(String firstName, String surname, String address, String postcode, String phone) {
         this.firstName = firstName;
@@ -62,11 +63,11 @@ public class Buyer {
         this.phone = phone;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

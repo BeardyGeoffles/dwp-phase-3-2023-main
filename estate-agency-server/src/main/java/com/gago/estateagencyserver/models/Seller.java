@@ -12,7 +12,8 @@ public class Seller {
 
     private String firstName, surname, address, postcode, phone;
 
-    public Seller(){};
+    public Seller() {
+    }
 
     public Seller(String firstName, String surname, String address, String postcode, String phone) {
         this.firstName = firstName;
@@ -62,12 +63,12 @@ public class Seller {
         this.phone = phone;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
 

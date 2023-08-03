@@ -15,27 +15,25 @@ public class BuyerServices {
     BuyerRepo repo;
 
     //CREATE & UPDATE
-    public void saveBuyer(Buyer buyer)
-    {
+    public void saveBuyer(Buyer buyer) {
         repo.save(buyer);
     }
 
     //READ
-    public Buyer getBuyer(Long buyerId)
-    {
+    public Buyer getBuyer(Long buyerId) {
         Optional<Buyer> buyer =
                 repo.findById(buyerId);
         return buyer.orElse(null);
     }
 
     //READ ALL
-    public List<Buyer> getAllBuyers()
-    {
+    public List<Buyer> getAllBuyers() {
         return repo.findAll();
     }
 
-
     //DELETE
-    public void deleteBuyer(Buyer buyer) {repo.delete(buyer);}
+    public void deleteBuyer(Buyer buyer) {
+        repo.delete(buyer);
+    }
 
 }
