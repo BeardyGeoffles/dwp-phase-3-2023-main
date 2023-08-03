@@ -85,15 +85,27 @@
         }
 
       .property-list .searchFormVisible{
-
-          background-color: red;
+          max-height: 400px;
+          -webkit-transition: max-height 1s;
+          -moz-transition: max-height 1s;
+          -ms-transition: max-height 1s;
+          -o-transition: max-height 1s;
+          overflow: hidden;
+          transition: max-height 1s;
       }
+
 
       .property-list .searchFormInvisible {
-          background-color: blue;
 
-
+          -webkit-transition: max-height 1s;
+          -moz-transition: max-height 1s;
+          -ms-transition: max-height 1s;
+          -o-transition: max-height 1s;
+          transition: max-height 1s;
+          overflow: hidden;
+          max-height: 0;
       }
+
 
       .container {
         display: grid;
