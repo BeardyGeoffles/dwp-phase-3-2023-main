@@ -171,7 +171,7 @@ export default function PropertyList() {
 
         <div className="property-list">
 
-        <button onClick={toggleSearchVisible}>Search</button>
+        <button onClick={toggleSearchVisible}>{searchVisible ? "Hide Search" : "Show Search"}</button>
 
         <form className={searchVisible ? "searchFormVisible" : "searchFormInvisible"}>
 
