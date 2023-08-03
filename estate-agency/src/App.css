@@ -119,8 +119,8 @@ a:hover {
 }
 
 .navbar li {
-  float: center;
-  align-items: right;
+  /*float: center;
+  align-items: right;*/
   text-align: center;
 }
 
@@ -364,44 +364,44 @@ a:hover {
     .navbar {
       flex-direction: column;
       background-color: rgb(60, 60, 60);
-    };
+    }
   }
 
   @media (max-width: 1000px) {
     #logo {
       display: none;
-    };
+    }
   }
 
   @media (max-width: 1800px) {
     .formContainer {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 20px;
-    };
+        grid-gap: 10px;
+    }
   }
   
   @media (max-width: 1000px) {
     .formContainer {
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: 20px;
-    };
+        grid-gap: 10px;
+    }
   }
 
   @media (max-width: 1000px) {
     .formContainerBook {
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: 20px;
-    };
+        grid-gap: 10px;
+    }
   }
 
   @media (max-width: 1000px) {
     .reviews {
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: 20px;
+        grid-gap: 10px;
         font-size:x-small;
-    };
+    }
   }
