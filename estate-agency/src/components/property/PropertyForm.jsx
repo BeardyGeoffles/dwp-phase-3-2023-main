@@ -11,7 +11,7 @@ export default function PropertyForm(){
     const [bedroom, setBedroom] = useState('');
     const [bathroom, setBathroom] = useState('');
     const [garden, setGarden] = useState('');
-    const [sellerId, setSellerId] = useState(0);
+    const [sellerId, setSellerId] = useState('');
     const [status, setStatus] = useState('FOR SALE');
     const [buyerId, setBuyerId] = useState(0);
 
@@ -50,7 +50,7 @@ export default function PropertyForm(){
         setBedroom('');
         setBathroom('');
         setGarden('');
-        setSellerId(0);
+        setSellerId('');
         setStatus('FOR SALE');
         setBuyerId(0);
 
@@ -123,7 +123,7 @@ export default function PropertyForm(){
             <label htmlFor="seller">Seller:</label>
             <select name="seller" id="seller" required value={sellerId}
             onChange={(e)=> setSellerId(parseInt(e.target.value))}>
-            <option value={0} selected disabled>Please Select</option>
+            <option value="" selected disabled>Please Select</option>
             {sellers.sort((a,b) => (a.surname < b.surname ? -1 : 1)).map((item) => 
                 <option value={item.id}>{item.firstName} {item.surname}</option>
             )}
