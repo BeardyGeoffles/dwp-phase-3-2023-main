@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import {AiOutlineIdcard, AiOutlineHome, AiOutlinePhone} from "react-icons/ai"
 import { Link } from 'react-router-dom';
 import styles from "./buyer.css";
+import "../lists.css"
 
 export default function BuyerList() {
 
@@ -27,12 +28,13 @@ export default function BuyerList() {
 
     return (
 
-        <div className="buyer-list">
+        <div className="list-container">
 
                 <h2>List of available buyers ({buyers.length})</h2>
 
+            <div className="result-list">
                 {buyers.sort((a,b) => (a.surname < b.surname ? -1 : 1)).map((item) => (
-                    <div className="buyer-display-short">
+                    <div className="result-card">
                         <div><AiOutlineIdcard /> {item.firstName} {item.surname}<br></br>
                         <h5><AiOutlineHome /> {item.address}<br></br>
                         <AiOutlinePhone /> {item.phone}</h5></div>
@@ -42,6 +44,9 @@ export default function BuyerList() {
                         </div>
                     </div>
                 ))}
+        </div>
+
+
         </div>
 
     )

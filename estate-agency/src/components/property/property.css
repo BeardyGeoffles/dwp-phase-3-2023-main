@@ -108,10 +108,10 @@
 
       .container {
         display: grid;
-        /*align-items: left; */
+        align-items: flex-start;
         grid-template-columns: 1fr 7fr;
         column-gap: 5px;
-          /*width: fit-content;*/
+          max-width: fit-content;
        }
   
     .status-for-sale {

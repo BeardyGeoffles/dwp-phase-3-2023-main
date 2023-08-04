@@ -73,14 +73,14 @@ export default function BookingList() {
 
     return (
 
-        <div className="booking-list">
+        <div className="list-container">
 
                 <h2>List of bookings ({bookings.filter(applyFilter).length}/{bookings.length})
                     {propertyFilter && <span> for <strong>{propertyFilter.address}, {propertyFilter.postcode}</strong></span>}
                 </h2>
-
+<div className="result-list">
                 {bookings.filter(applyFilter).sort((a,b) => (a.time < b.time ? -1 : 1)).map((item) => (
-                    <div className="booking-display-short">
+                    <div className="result-card">
                         <div><BsCalendarDate/> {new Date(item.time).toLocaleDateString('en-GB')} - <BiTime /> {new Date(item.time).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</div>
                         <div><BsHouseDoor/> {getAddress(item.propertyId)}</div>
                         <div><BiUser /> {getBuyerName(item.buyerId)}</div>
@@ -90,7 +90,7 @@ export default function BookingList() {
                         </div>
                     </div>
                 ))}
-
+</div>
 
         </div>
 

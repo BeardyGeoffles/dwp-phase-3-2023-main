@@ -5,19 +5,19 @@
     padding: 1rem;
   }
   
-  .seller-display-short{
-    border: 1px gray solid;
-    border-radius: 5px;
-    padding: 5px;
-    margin-right: 20px;
-    margin-bottom: 5px;
-    font-weight: bold;
-    font-size: 15pt;
-    width: 90%;
-    display:grid;
-    vertical-align: top;
-    background-color: white;
-  }
+  /*.seller-display-short{*/
+  /*  border: 1px gray solid;*/
+  /*  border-radius: 5px;*/
+  /*  padding: 5px;*/
+  /*  margin-right: 20px;*/
+  /*  margin-bottom: 5px;*/
+  /*  font-weight: bold;*/
+  /*  font-size: 15pt;*/
+  /*  width: 90%;*/
+  /*  display:grid;*/
+  /*  vertical-align: top;*/
+  /*  background-color: white;*/
+  /*}*/
   
   .seller-form label {
       border-radius: 5px;
