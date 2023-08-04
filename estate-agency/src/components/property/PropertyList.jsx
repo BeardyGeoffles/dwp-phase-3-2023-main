@@ -265,11 +265,11 @@ export default function PropertyList() {
 
                 {properties.filter(applySearch).map((item) => (
                   <div className="property-display-short">
-                        <div class="container">
-                            <div class="image">
+                        <div className="container">
+                            <div className="image">
                             <img src="https://www.saarescue.co.uk/wp-content/uploads/2017/10/Awaiting-Image.jpg" width="200px" alt="" />
                             </div>
-                            <div class="desc">
+                            <div className="propertyResultBox">
                                 {getStatus(item)}<br></br>
                             {item.address}, {item.postcode}<br></br>
                          {item.type} <TbBath /> {item.bathroom}, <TbBed /> {item.bedroom}

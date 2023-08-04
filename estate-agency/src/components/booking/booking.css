@@ -16,6 +16,10 @@
     vertical-align: top;
     background-color: white;
   }
+
+  .formContainerBook{
+      width: fit-content;
+  }
   
   .booking-form label {
       border-radius: 5px;
