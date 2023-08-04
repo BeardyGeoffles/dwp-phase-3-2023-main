@@ -5,10 +5,10 @@ import { BsCalendarPlus} from "react-icons/bs";
 
 export default function BookingForm() {
 
-    const [propertyId, setPropertyId] = useState(0);
+    const [propertyId, setPropertyId] = useState('');
     const [bookingDate, setBookingDate] = useState('');
     const [bookingTime, setBookingTime] = useState(8);
-    const [buyerId, setBuyerId] = useState(0);
+    const [buyerId, setBuyerId] = useState('');
 
 
 
@@ -38,10 +38,10 @@ export default function BookingForm() {
             body: JSON.stringify(newbooking)
         })
 
-        setPropertyId(0)
+        setPropertyId('')
         setBookingDate('')
         setBookingTime('')
-        setBuyerId(0)
+        setBuyerId('')
 
         window.location.reload();
 
@@ -79,7 +79,7 @@ export default function BookingForm() {
             <label htmlFor="propertyId">Property:</label>
             <select required value={propertyId} name="propertyId" id="propertyId" 
             onChange={(e) => setPropertyId(parseInt(e.target.value))}>
-                <option value="0" selected disabled>Please select</option>
+                <option value="" selected disabled>Please select</option>
                 { properties.filter((item) => item.status === 'FOR SALE').map((item) => 
                 <option value={item.id}>{item.address}</option>
                 )}
@@ -111,7 +111,7 @@ export default function BookingForm() {
             <label htmlFor="buyerId">Buyer:</label>
             <select required value={buyerId} name="buyerId" id="buyerId"
             onChange={(e) => setBuyerId(parseInt(e.target.value))}>
-                <option value={0} selected disabled>Please select</option>
+                <option value="" selected disabled>Please select</option>
                 { buyers.sort((a,b) => (a.surname < b.surname ? -1 : 1)).map((item) => 
                 <option value={item.id}>{item.firstName} {item.surname}</option>
                 )}
