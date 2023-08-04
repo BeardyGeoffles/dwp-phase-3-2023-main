@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import {TbBed, TbBath} from "react-icons/tb";
+import {TbBed, TbBath, } from "react-icons/tb";
+import { BsSearch} from "react-icons/bs"
 import { Link } from 'react-router-dom';
 import styles from "./property.css";
 import {Navigate, useNavigate} from "react-router";
@@ -171,7 +172,7 @@ export default function PropertyList() {
 
         <div className="property-list">
 
-        <button onClick={toggleSearchVisible}>{searchVisible ? "Hide Search" : "Show Search"}</button>
+        <button onClick={toggleSearchVisible}><BsSearch />{searchVisible ? " Hide Search" : " Show Search"}</button>
 
         <form className={searchVisible ? "searchFormVisible" : "searchFormInvisible"}>
 
