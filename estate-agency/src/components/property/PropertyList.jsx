@@ -4,9 +4,12 @@ import { BsSearch} from "react-icons/bs"
 import { Link } from 'react-router-dom';
 import styles from "./property.css";
 import {Navigate, useNavigate} from "react-router";
+import {useLocation} from "react-router";
 
 
 export default function PropertyList() {
+
+    const sellerFilter = useLocation().state;
 
     const [properties, setProperties] = useState([]);
     const [propertyUpdated, setPropertyUpdated] = useState(true);
@@ -130,12 +133,19 @@ export default function PropertyList() {
 
 
     function applySearch(property){
+
+        let sellerMatch = true;
+        if (sellerFilter) {
+            sellerMatch = sellerFilter.id === property.sellerId;
+        }
+
+
         return (searchType === "ANY" || property.type === searchType) &&
         (searchStatus === "ANY" || property.status === searchStatus) &&
         (searchPrice === "ANY" || property.price <= parseInt(searchPrice)) &&
         (searchGarden === 'ANY' || property.garden === searchGarden) &&
         (searchMinBathroom === "ANY" || property.bathroom >= parseInt(searchMinBathroom)) &&
-        (searchMinBedroom === "ANY" || property.bedroom >= parseInt(searchMinBedroom))
+        (searchMinBedroom === "ANY" || property.bedroom >= parseInt(searchMinBedroom)) && sellerMatch
 
     }
 
@@ -244,7 +254,11 @@ export default function PropertyList() {
         </div>
         </form>
 
-        <h2>List of available properties ({properties.filter(applySearch).length}/{properties.length})</h2>
+        <h2>List of available properties ({properties.filter(applySearch).length}/{properties.length})
+            {sellerFilter && <span> for {sellerFilter.firstName} {sellerFilter.surname}</span>}
+        </h2>
+
+
 
                 {properties.filter(applySearch).map((item) => (
                   <div className="property-display-short">

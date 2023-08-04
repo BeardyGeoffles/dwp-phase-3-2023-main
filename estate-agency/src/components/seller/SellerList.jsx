@@ -37,7 +37,7 @@ export default function SellerList() {
                         <h5><AiOutlineHome /> {item.address}<br></br>
                         <AiOutlinePhone /> {item.phone}</h5></div>
                         <div className='property-buttons'>
-                        <Link to={'/property'} className='seller-property-button'> Properties </Link>
+                        <Link to={`/property/${item.id}`} state={item} className='seller-property-button'> Properties </Link>
                         <Link to={`/seller/${item.id}/edit`} state={item} className='edit-button'>Edit</Link>
                         <button className='delete-button' onClick={() => sellerDelete(item)}>Delete</button>
                         </div>
