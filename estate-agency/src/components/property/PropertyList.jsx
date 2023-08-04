@@ -44,6 +44,7 @@ export default function PropertyList() {
                     <div className='property-buttons'>
                 <button className='property-button' onClick={() => setSold(item)}>Set Sold</button>  
                 <button className='property-button' onClick={() => withdraw(item)}>Withdraw</button>
+                        <Link to={`/booking/${item.id}`} state={item} className='property-booking-button'>Bookings</Link>
                 <Link to={`/property/${item.id}/edit`} state={item} className='edit-button'>Edit</Link>
 
                 <button className='delete-button' onClick={() => propDelete(item)}>Delete</button>
@@ -52,7 +53,8 @@ export default function PropertyList() {
             case 'SOLD':
                 return (
                 <div className='property-buttons'>
-                <button className='property-button' onClick={() => setForSale(item)}>Set For Sale</button>  
+                <button className='property-button' onClick={() => setForSale(item)}>Set For Sale</button>
+                    <Link to={`/booking/${item.id}`} state={item} className='property-booking-button'>Bookings</Link>
                 <Link to={`/property/${item.id}/edit`} state={item} className='edit-button'>Edit</Link>
 
                 <button className='delete-button' onClick={() => propDelete(item)}>Delete</button>
@@ -61,7 +63,8 @@ export default function PropertyList() {
             case 'WITHDRAWN':
                 return (
                 <div className='property-buttons'>
-                <button className='property-button' onClick={() => setForSale(item)}>Set For Sale</button>  
+                <button className='property-button' onClick={() => setForSale(item)}>Set For Sale</button>
+                    <Link to={`/booking/${item.id}`} state={item} className='property-booking-button'>Bookings</Link>
                 <Link to={`/property/${item.id}/edit`} state={item} className='edit-button'>Edit</Link>
 
                     <button className='delete-button' onClick={() => propDelete(item)}>Delete</button>
@@ -71,7 +74,7 @@ export default function PropertyList() {
                 return (
                     <div className='property-buttons'>
                     <button className='property-button' onClick={() => setForSale(item)}>Set For Sale</button>
-
+                        <Link to={`/booking/${item.id}`} state={item} className='property-booking-button'>Bookings</Link>
                     <Link to={`/property/${item.id}/edit`} state={item} className='edit-button'>Edit</Link>
 
                     <button className='delete-button' onClick={() => propDelete(item)}>Delete</button>
@@ -255,7 +258,7 @@ export default function PropertyList() {
         </form>
 
         <h2>List of available properties ({properties.filter(applySearch).length}/{properties.length})
-            {sellerFilter && <span> for {sellerFilter.firstName} {sellerFilter.surname}</span>}
+            {sellerFilter && <span> for <strong>{sellerFilter.firstName} {sellerFilter.surname}</strong></span>}
         </h2>
 
 

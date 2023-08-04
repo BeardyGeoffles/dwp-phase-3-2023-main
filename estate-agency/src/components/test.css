@@ -38,6 +38,16 @@
     box-sizing: border-box;
 }
 
+.property-booking-button {
+    max-width: 100px;
+    font-size: .8rem;
+    background-color: lightblue;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
 
 
 .BuyerEditPage {

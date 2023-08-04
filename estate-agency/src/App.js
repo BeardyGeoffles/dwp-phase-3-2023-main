@@ -26,6 +26,7 @@ function App() {
             <Route path="/property" element={<PropertyPage />} />
             <Route path="/property/:sellerID" element={<PropertyPage />} />
             <Route path="/booking" element={<BookingPage />} />
+            <Route path="/booking/:propertyID" element={<BookingPage />} />
             <Route path="/buyer/:buyerID/edit" element={<BuyerEditPage />} />
             <Route path="/seller/:sellerID/edit" element={<SellerEditPage />} />
             <Route path="/property/:propertyID/edit" element={<PropertyEditPage />} />

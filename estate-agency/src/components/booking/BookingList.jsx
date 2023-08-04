@@ -3,8 +3,11 @@ import styles from "./booking.css"
 import {BsCalendarDate,BsHouseDoor} from "react-icons/bs";
 import {BiTime,BiUser} from "react-icons/bi";
 import { Link } from 'react-router-dom';
+import {useLocation} from "react-router";
 
 export default function BookingList() {
+
+    const propertyFilter = useLocation().state;
 
     const [bookings, setBookings] = useState([]);
     const [properties, setProperties] = useState([]);
@@ -59,13 +62,24 @@ export default function BookingList() {
            }
     }
 
+    function applyFilter(booking){
+
+        let propertyMatch = true;
+        if (propertyFilter) {
+            propertyMatch = propertyFilter.id === booking.propertyId;
+        }
+        return propertyMatch;
+    }
+
     return (
 
         <div className="booking-list">
 
-                <h2>List of bookings ({bookings.length})</h2>
+                <h2>List of bookings ({bookings.filter(applyFilter).length}/{bookings.length})
+                    {propertyFilter && <span> for <strong>{propertyFilter.address}, {propertyFilter.postcode}</strong></span>}
+                </h2>
 
-                {bookings.sort((a,b) => (a.time < b.time ? -1 : 1)).map((item) => (
+                {bookings.filter(applyFilter).sort((a,b) => (a.time < b.time ? -1 : 1)).map((item) => (
                     <div className="booking-display-short">
                         <div><BsCalendarDate/> {new Date(item.time).toLocaleDateString('en-GB')} - <BiTime /> {new Date(item.time).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</div>
                         <div><BsHouseDoor/> {getAddress(item.propertyId)}</div>
