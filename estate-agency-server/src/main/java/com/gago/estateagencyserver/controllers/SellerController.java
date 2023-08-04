@@ -3,6 +3,7 @@ package com.gago.estateagencyserver.controllers;
 import com.gago.estateagencyserver.DTO.SellerDTO;
 import com.gago.estateagencyserver.models.Seller;
 import com.gago.estateagencyserver.services.SellerServices;
+import jakarta.validation.Valid;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +21,7 @@ public class SellerController {
     ModelMapper modelMapper;
 
     @PostMapping("/createSeller")
-    public void createSeller(@RequestBody SellerDTO sellerDTO) {
+    public void createSeller(@Valid @RequestBody SellerDTO sellerDTO) {
         Seller seller = modelMapper.map(sellerDTO, Seller.class);
         sellerServices.saveSeller(seller);
     }
@@ -33,7 +34,7 @@ public class SellerController {
     }
 
     @PutMapping("/editSeller")
-    public void editSeller(@RequestBody SellerDTO sellerDTO) {
+    public void editSeller(@Valid @RequestBody SellerDTO sellerDTO) {
         Seller seller = modelMapper.map(sellerDTO, Seller.class);
         sellerServices.saveSeller(seller);
     }

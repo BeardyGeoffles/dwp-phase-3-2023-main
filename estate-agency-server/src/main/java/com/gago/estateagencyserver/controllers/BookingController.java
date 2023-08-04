@@ -3,6 +3,7 @@ package com.gago.estateagencyserver.controllers;
 import com.gago.estateagencyserver.DTO.BookingDTO;
 import com.gago.estateagencyserver.models.Booking;
 import com.gago.estateagencyserver.services.BookingServices;
+import jakarta.validation.Valid;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -29,13 +30,13 @@ public class BookingController {
     }
 
     @PutMapping("/editBooking")
-    public void editBooking(@RequestBody BookingDTO bookingDTO) {
+    public void editBooking(@Valid @RequestBody BookingDTO bookingDTO) {
         Booking booking = modelMapper.map(bookingDTO, Booking.class);
         bookingServices.saveBooking(booking);
     }
 
     @PostMapping("/createBooking")
-    public void createBooking(@RequestBody BookingDTO bookingDTO) {
+    public void createBooking(@Valid @RequestBody BookingDTO bookingDTO) {
         Booking booking = modelMapper.map(bookingDTO, Booking.class);
         bookingServices.saveBooking(booking);
     }

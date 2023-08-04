@@ -15,14 +15,6 @@ export default function PropertyForm(){
     const [status, setStatus] = useState('FOR SALE');
     const [buyerId, setBuyerId] = useState(0);
 
-    // const [buyers, setBuyers] = useState([]);
-    //
-    // useEffect(() => {
-    //     fetch("http://localhost:8080/getAllBuyers")
-    //     .then((response) => response.json())
-    //     .then((data) => setBuyers(data))
-    // }, [])
-
     const [sellers, setSellers] = useState([]);
 
     useEffect(() => {

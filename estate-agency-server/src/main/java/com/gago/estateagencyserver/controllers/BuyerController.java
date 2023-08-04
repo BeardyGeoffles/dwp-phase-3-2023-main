@@ -3,6 +3,7 @@ package com.gago.estateagencyserver.controllers;
 import com.gago.estateagencyserver.DTO.BuyerDTO;
 import com.gago.estateagencyserver.models.Buyer;
 import com.gago.estateagencyserver.services.BuyerServices;
+import jakarta.validation.Valid;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -27,13 +28,13 @@ public class BuyerController {
     }
 
     @PostMapping("/createBuyer")
-    public void createBuyer(@RequestBody BuyerDTO buyerDTO) {
+    public void createBuyer(@Valid @RequestBody BuyerDTO buyerDTO) {
         Buyer buyer = modelMapper.map(buyerDTO, Buyer.class);
         buyerServices.saveBuyer(buyer);
     }
 
     @PutMapping("/editBuyer")
-    public void editBuyer(@RequestBody BuyerDTO buyerDTO) {
+    public void editBuyer(@Valid @RequestBody BuyerDTO buyerDTO) {
         Buyer buyer = modelMapper.map(buyerDTO, Buyer.class);
         buyerServices.saveBuyer(buyer);
     }

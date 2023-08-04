@@ -108,7 +108,7 @@
 
       .container {
         display: grid;
-        align-items: left; 
+        /*align-items: left; */
         grid-template-columns: 1fr 7fr;
         column-gap: 5px;
        }
@@ -173,6 +173,9 @@
         box-sizing: border-box;
     
     }
+    .formContainer{
+        max-width: fit-content;
+    }
     
     .BuyerEditPage {
         padding: 1rem;
@@ -184,4 +187,8 @@
     
     .PropertyEditPage {
         padding: 1rem;
+    }
+
+    .property-display-short{
+        max-width: fit-content;
     }
