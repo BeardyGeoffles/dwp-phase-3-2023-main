@@ -9,7 +9,7 @@ export default function BookingForm() {
     const propertyFilter = useLocation().state;
 
 
-    const [propertyId, setPropertyId] = useState('');
+    const [propertyId, setPropertyId] = useState(propertyFilter ? (propertyFilter.id) :  '');
     const [bookingDate, setBookingDate] = useState('');
     const [bookingTime, setBookingTime] = useState(8);
     const [buyerId, setBuyerId] = useState('');
@@ -24,6 +24,7 @@ export default function BookingForm() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
+
         let time = new Date(bookingDate)
         time.setHours(bookingTime)
 
@@ -32,7 +33,6 @@ export default function BookingForm() {
             alert('Error: Booking already exists!');
             return;
         }
-
 
         const newbooking = {propertyId, time, buyerId};
 
