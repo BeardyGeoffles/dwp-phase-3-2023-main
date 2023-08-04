@@ -1,9 +1,13 @@
 
 import { useEffect, useState} from "react"
 import { BsCalendarPlus} from "react-icons/bs";
+import {useLocation} from "react-router";
 
 
 export default function BookingForm() {
+
+    const propertyFilter = useLocation().state;
+
 
     const [propertyId, setPropertyId] = useState('');
     const [bookingDate, setBookingDate] = useState('');
@@ -72,15 +76,19 @@ export default function BookingForm() {
     return (
         <form className="booking-form" onSubmit={handleSubmit}>
 
-            <h2>Add a new booking</h2>
+            <h2>Add a new booking {propertyFilter &&
+            <span> for {propertyFilter.address}, {propertyFilter.postcode}</span>
+            }
+
+            </h2>
 
             <div className="formContainerBook">
             <div>
             <label htmlFor="propertyId">Property:</label>
-            <select required value={propertyId} name="propertyId" id="propertyId" 
+            <select required value={propertyFilter? propertyFilter.id : propertyId} name="propertyId" id="propertyId"
             onChange={(e) => setPropertyId(parseInt(e.target.value))}>
                 <option value="" selected disabled>Please select</option>
-                { properties.filter((item) => item.status === 'FOR SALE').map((item) => 
+                { propertyFilter ? <option value={propertyFilter.id}>{propertyFilter.address}</option> : properties.filter((item) => item.status === 'FOR SALE').map((item) =>
                 <option value={item.id}>{item.address}</option>
                 )}
             </select>
