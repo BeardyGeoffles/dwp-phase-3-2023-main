@@ -22,8 +22,16 @@
     margin-bottom: 5px;
     font-weight: bold;
     font-size: 15pt;
-    /*width: 90%;*/
     display:grid;
     vertical-align: top;
     background-color: white;
+
+    align-items: flex-start;
+    grid-template-columns: 200px auto;
+    /*grid-auto-columns: auto;*/
+    /*grid*/
+    column-gap: 5px;
+    /*max-width: fit-content;*/
   }
+
+

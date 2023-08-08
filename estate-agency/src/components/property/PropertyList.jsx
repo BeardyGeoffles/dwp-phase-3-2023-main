@@ -265,10 +265,10 @@ export default function PropertyList() {
                 <div className="result-list">
                     {properties.filter(applySearch).map((item) => (
                     <div className="result-card">
-                        <div className="container">
-                            <div className="image">
+                        {/*<div className="container">*/}
+                        {/*    <div className="image">*/}
                             <img src="https://www.saarescue.co.uk/wp-content/uploads/2017/10/Awaiting-Image.jpg" width="200px" alt="" />
-                            </div>
+                            {/*</div>*/}
                             <div className="propertyResultBox">
                                 {getStatus(item)}<br></br>
                             {item.address}, {item.postcode}<br></br>
@@ -276,7 +276,8 @@ export default function PropertyList() {
                             <br></br>
                             {getButtons(item)}
                             </div>
-                         </div>
+
+                         {/*</div>*/}
                     </div>))}
                 </div>
             </div>

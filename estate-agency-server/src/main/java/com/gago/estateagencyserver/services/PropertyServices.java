@@ -56,7 +56,7 @@ public class PropertyServices {
         System.out.println("Address of property object: " +property);
 
 
-//        property.getBuyer().setId(1L); for testing only
+//        property.getBuyer().setId(1L);
         repo.save(property);
     }
 
