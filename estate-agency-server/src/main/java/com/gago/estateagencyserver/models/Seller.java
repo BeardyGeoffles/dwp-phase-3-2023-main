@@ -1,5 +1,6 @@
 package com.gago.estateagencyserver.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -8,6 +9,7 @@ import jakarta.persistence.Id;
 public class Seller {
     @Id
     @GeneratedValue
+    @Column(name = "seller_id")
     private Long id;
 
     private String firstName, surname, address, postcode, phone;

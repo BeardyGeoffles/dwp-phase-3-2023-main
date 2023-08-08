@@ -27,4 +27,8 @@ public class PropertyDTO {
     @NotNull(message = "Property must be associated with a seller")
     private Long sellerId;
     private Long buyerId;
+
 }
+
+//few things, time on UI probably took the longest... we thought that DTO would have taken longer, but actually didn't take long at all.
+// consitancy in variable names

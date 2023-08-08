@@ -1,41 +1,46 @@
 package com.gago.estateagencyserver.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Booking {
     @Id
     @GeneratedValue
+    @Column(name = "booking_id")
     private Long id;
 
-    private Long propertyId, buyerId;
+    @ManyToOne()
+    @JoinColumn(name = "property_id")
+    private Property propertyId;
+
+    @ManyToOne()
+    @JoinColumn(name = "buyer_id")
+    private Buyer buyerId;
 
     private String time;
 
     public Booking() {
     }
 
-    public Booking(Long propertyId, Long buyerId, String time) {
+    public Booking(Property propertyId, Buyer buyerId, String time) {
         this.propertyId = propertyId;
         this.buyerId = buyerId;
         this.time = time;
     }
 
-    public Long getPropertyId() {
+    public Property getPropertyId() {
         return propertyId;
     }
 
-    public void setPropertyId(Long propertyId) {
+    public void setPropertyId(Property propertyId) {
         this.propertyId = propertyId;
     }
 
-    public Long getBuyerId() {
+    public Buyer getBuyerId() {
         return buyerId;
     }
 
-    public void setBuyerId(Long buyerId) {
+    public void setBuyerId(Buyer buyerId) {
         this.buyerId = buyerId;
     }
 

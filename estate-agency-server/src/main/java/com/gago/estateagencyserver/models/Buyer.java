@@ -1,17 +1,20 @@
 package com.gago.estateagencyserver.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class Buyer {
     @Id
     @GeneratedValue
+    @Column(name = "buyer_id")
     private Long id;
 
     private String firstName, surname, address, postcode, phone;
 
+    @OneToMany(mappedBy = "buyer")
+    private List<Property> properties;
     public Buyer() {
     }
 
@@ -21,6 +24,14 @@ public class Buyer {
         this.address = address;
         this.postcode = postcode;
         this.phone = phone;
+    }
+
+    public List<Property> getProperties() {
+        return properties;
+    }
+
+    public void setProperties(List<Property> properties) {
+        this.properties = properties;
     }
 
     public String getFirstName() {

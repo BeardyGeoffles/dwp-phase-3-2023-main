@@ -1,24 +1,32 @@
 package com.gago.estateagencyserver.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Property {
     @Id
     @GeneratedValue
+    @Column(name = "property_id")
     private Long id;
 
     private String address, postcode, type, garden, status;
     private int price, bedroom, bathroom;
 
-    private Long sellerId, buyerId;
+    @ManyToOne()
+    @JoinColumn(name = "seller_id")
+    private Seller seller;
+
+    @ManyToOne()
+    @JoinColumn(name = "buyer_id", nullable = true)
+    private Buyer buyer;
+
 
     public Property() {
     }
 
-    public Property(String address, String postcode, String type, String garden, String status, int price, int bedroom, int bathroom, Long sellerId, Long buyerId) {
+    public Property(String address, String postcode, String type, String garden, String status,
+                    int price, int bedroom, int bathroom, Seller seller
+                    ) {
         this.address = address;
         this.postcode = postcode;
         this.type = type;
@@ -27,9 +35,10 @@ public class Property {
         this.price = price;
         this.bedroom = bedroom;
         this.bathroom = bathroom;
-        this.sellerId = sellerId;
-        this.buyerId = buyerId;
+        this.seller = seller;
     }
+
+
 
     public String getAddress() {
         return address;
@@ -95,12 +104,12 @@ public class Property {
         this.bathroom = bathroom;
     }
 
-    public Long getSellerId() {
-        return sellerId;
+    public Seller getSeller() {
+        return seller;
     }
 
-    public void setSellerId(Long sellerId) {
-        this.sellerId = sellerId;
+    public void setSeller(Seller seller) {
+        this.seller = seller;
     }
 
     public Long getId() {
@@ -111,11 +120,11 @@ public class Property {
         this.id = id;
     }
 
-    public Long getBuyerId() {
-        return buyerId;
+    public Buyer getBuyer() {
+        return buyer;
     }
 
-    public void setBuyerId(Long buyerId) {
-        this.buyerId = buyerId;
+    public void setBuyer(Buyer buyer) {
+        this.buyer = buyer;
     }
 }

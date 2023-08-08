@@ -13,7 +13,7 @@ export default function PropertyForm(){
     const [garden, setGarden] = useState('');
     const [sellerId, setSellerId] = useState('');
     const [status, setStatus] = useState('FOR SALE');
-    const [buyerId, setBuyerId] = useState(0);
+    const [buyerId, setBuyerId] = useState(null);
 
     const [sellers, setSellers] = useState([]);
 
@@ -26,7 +26,7 @@ export default function PropertyForm(){
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        const property = {address, postcode, type, price, bedroom, bathroom, garden, sellerId, status, buyerId};
+        const property = {address, postcode, type, price, bedroom, bathroom, garden, sellerId, status};
 
         fetch('http://localhost:8080/createProperty', {
             method: 'POST',
@@ -44,7 +44,7 @@ export default function PropertyForm(){
         setGarden('');
         setSellerId('');
         setStatus('FOR SALE');
-        setBuyerId(0);
+        // setBuyerId(0);
 
         window.location.reload();
 

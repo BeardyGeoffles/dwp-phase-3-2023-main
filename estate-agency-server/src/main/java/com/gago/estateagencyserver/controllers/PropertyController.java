@@ -29,14 +29,12 @@ public class PropertyController {
 
     @PostMapping("/createProperty")
     public void createProperty(@Valid @RequestBody PropertyDTO propertyDTO) {
-        Property property = modelMapper.map(propertyDTO, Property.class);
-        propertyServices.saveProperty(property);
+        propertyServices.saveProperty(propertyDTO);
     }
 
     @PutMapping("/editProperty")
     public void editProperty(@Valid @RequestBody PropertyDTO propertyDTO) {
-        Property property = modelMapper.map(propertyDTO, Property.class);
-        propertyServices.saveProperty(property);
+        propertyServices.saveProperty(propertyDTO);
     }
 
     @DeleteMapping("/deleteProperty")
