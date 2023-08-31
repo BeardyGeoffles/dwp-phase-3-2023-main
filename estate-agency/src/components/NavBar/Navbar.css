@@ -1,0 +1,33 @@
+.navbar {
+    max-width: 1200px;
+    /*background-color: rgb(60, 60, 60);*/
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 10px;
+}
+
+.navbar li {
+    text-align: center;
+}
+
+
+@media (max-width: 1000px) {
+    .navbar {
+        flex-direction: column;
+        /*background-color: rgb(60, 60, 60);*/
+    }
+}
+
+@media (max-width: 1000px) {
+    #logo {
+        display: none;
+    }
+}

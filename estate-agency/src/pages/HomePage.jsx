@@ -1,6 +1,7 @@
 import city from "../images/city.jpeg";
 import Footer from "../components/homepage/Footer";
 import Testimonials from "../components/homepage/testimonials";
+// import "../components/homepage/home.css"
 
 export default function HomePage() {
 

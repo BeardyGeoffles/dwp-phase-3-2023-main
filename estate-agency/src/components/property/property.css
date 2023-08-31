@@ -2,6 +2,8 @@
 .PropertyPage {
     background-color: rgb(220, 220, 220);
     padding: 1rem;
+    max-width: 1200px;
+    margin: auto;
   }
   
   .property-display-short{
@@ -183,14 +185,20 @@
     
     .BuyerEditPage {
         padding: 1rem;
+        max-width: 1200px;
+        margin: auto;
     }
     
     .SellerEditPage {
         padding: 1rem;
+        max-width: 1200px;
+        margin: auto;
     }
     
     .PropertyEditPage {
         padding: 1rem;
+        max-width: 1200px;
+        margin: auto;
     }
 
 

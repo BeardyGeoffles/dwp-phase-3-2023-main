@@ -1,6 +1,8 @@
 .BookingPage {
     background-color: rgb(220, 220, 220);
     padding: 1rem;
+    max-width: 1200px;
+    margin: auto;
   }
   
   .booking-display-short{
@@ -64,4 +66,6 @@
         .BookingEditPage {
           background-color: rgb(220, 220, 220);
           padding: 1rem;
+            max-width: 1200px;
+            margin: auto;
         }

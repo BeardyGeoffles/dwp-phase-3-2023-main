@@ -3,6 +3,8 @@
   .SellerPage {
     background-color: rgb(220, 220, 220);
     padding: 1rem;
+      max-width: 1200px;
+      margin: auto;
   }
   
   /*.seller-display-short{*/

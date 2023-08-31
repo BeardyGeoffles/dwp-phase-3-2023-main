@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import {AiOutlineIdcard, AiOutlineHome, AiOutlinePhone} from "react-icons/ai"
 import { Link } from 'react-router-dom';
 import styles from "./seller.css"
-import "../lists.css"
+import "../ResultsLists.css"
 
 export default function SellerList() {
 

@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
 
 
+.HomePage{
+  max-width: 1200px;
+  margin: auto;
+}
+
 .homeBox {
     padding: 0PX;
     position: relative;
@@ -9,12 +14,12 @@
     font-weight: bold;
     color: rgb(217, 217, 217);
   }
-  
+
   .homeBox h1 {
     color: white;
     font-size: medium;
   }
-  
+
   .top-left {
     position:absolute ;
     border-radius: 10px;
@@ -27,7 +32,7 @@
     text-align:justify;
     width: 40%;
   }
-  
+
   .footer{
     width: 100%;
     background-color: rgb(60, 60, 60);
@@ -36,7 +41,7 @@
     font-weight: bold;
     bottom: 0;
   }
-  
+
   .footer h4{
     text-align: left;
     margin-left: 20px;

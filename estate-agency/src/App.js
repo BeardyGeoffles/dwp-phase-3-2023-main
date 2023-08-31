@@ -9,7 +9,7 @@ import PropertyPage from './pages/PropertyPage';
 import PropertyEditPage from './pages/PropertyEditPage';
 import SellerPage from './pages/SellerPage';
 import SellerEditPage from './pages/SellerEditPage';
-import Navbar from './components/Navbar';
+import Navbar from './components/NavBar/Navbar';
 
 function App() {
   return (
