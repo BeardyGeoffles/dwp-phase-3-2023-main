@@ -4,11 +4,11 @@ import PropertyForm from "../components/property/PropertyForm";
 export default function PropertyPage() {
     return (
         <div className="PropertyPage">
-            
+
             <PropertyForm />
 
             <PropertyList />
+            </div>
 
-        </div>
     );
 }

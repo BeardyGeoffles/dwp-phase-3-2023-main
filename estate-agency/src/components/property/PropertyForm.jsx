@@ -51,8 +51,7 @@ export default function PropertyForm(){
     }
     
     return (
-
-
+        <div className="alignMe">
         <form className="property-form" onSubmit={handleSubmit}>
 
             <h2>Add a new property</h2>
@@ -130,5 +129,6 @@ export default function PropertyForm(){
             
             
         </form>
+        </div>
     )
 }

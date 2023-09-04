@@ -20,6 +20,7 @@
     vertical-align: top;
     background-color: white;
   }
+
   
   .property-form label {
       border-radius: 5px;
@@ -184,18 +185,21 @@
     }
     
     .BuyerEditPage {
+        background-color: rgb(220, 220, 220);
         padding: 1rem;
         max-width: 1200px;
         margin: auto;
     }
     
     .SellerEditPage {
+        background-color: rgb(220, 220, 220);
         padding: 1rem;
         max-width: 1200px;
         margin: auto;
     }
     
     .PropertyEditPage {
+        background-color: rgb(220, 220, 220);
         padding: 1rem;
         max-width: 1200px;
         margin: auto;

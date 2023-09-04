@@ -1,5 +1,8 @@
 /* Generic CSS */
 
+.alignMe{
+margin: auto;
+}
 
 body {
   background-color: rgb(244, 243, 243);
@@ -41,9 +44,15 @@ button:hover{
   background-color: rgb(2, 83, 30);
 }
 
-.formContainer {
+/*.formContainer {*/
+/*  display: grid;*/
+/*  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;*/
+/*  grid-gap: 10px;*/
+/*}*/
+
+.formContainer{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
 }
 
@@ -301,13 +310,13 @@ a:hover {
 
 
 
-  @media (max-width: 1800px) {
-    .formContainer {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 10px;
-    }
-  }
+  /*@media (max-width: 1800px) {*/
+  /*  .formContainer {*/
+  /*      display: grid;*/
+  /*      grid-template-columns: 1fr 1fr;*/
+  /*      grid-gap: 10px;*/
+  /*  }*/
+  /*}*/
   
   @media (max-width: 1000px) {
     .formContainer {
